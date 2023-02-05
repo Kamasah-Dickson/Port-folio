@@ -2,11 +2,13 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import "./index.css";
 // import { motion } from "framer-motion";
-
+import ContextProvider from "./context/ThemeContext";
 export default function App() {
 	return (
 		<>
-			<Home />
+			<ContextProvider>
+				<Home />
+			</ContextProvider>
 		</>
 	);
 }
