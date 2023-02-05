@@ -12,32 +12,32 @@ function Header() {
 				<nav>
 					<ul className="flex items-center gap-5">
 						<li className="text-white active:scale-x-105 list-none">
-							<a className=" text-md font-medium before" href="#home">
+							<a className=" text-sm font-medium before" href="#home">
 								HOME
 							</a>
 						</li>
 						<li className="text-white active:scale-x-105">
-							<a className=" text-md font-medium before" href="#about">
+							<a className=" text-sm font-medium before" href="#about">
 								ABOUT
 							</a>
 						</li>
 						<li className="text-white active:scale-x-105">
-							<a className=" text-md font-medium before" href="#hire-me">
+							<a className=" text-sm font-medium before" href="#hire-me">
 								HIRE ME
 							</a>
 						</li>
 						<li className="text-white active:scale-x-105">
-							<a className=" text-md font-medium before" href="#technologies">
+							<a className=" text-sm font-medium before" href="#technologies">
 								TECHNOLOGIES
 							</a>
 						</li>
 						<li className="text-white active:scale-x-105">
-							<a className=" text-md font-medium before" href="#projects">
+							<a className=" text-sm font-medium before" href="#projects">
 								PROJECTS
 							</a>
 						</li>
 						<li className="text-white active:scale-x-105">
-							<a className=" text-md font-medium before" href="#contact">
+							<a className=" text-sm font-medium before" href="#contact">
 								CONTACT
 							</a>
 						</li>
