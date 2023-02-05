@@ -5,6 +5,7 @@ import git from "../assets/github.svg";
 import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
 import fem from "../assets/frontend.svg";
+
 function Home() {
 	return (
 		<>
