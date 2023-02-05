@@ -6,7 +6,7 @@ interface contextInterface {
 }
 
 export const ThemeContext = createContext<contextInterface>({
-	theme: false,
+	theme: true,
 	setTheme: () => {},
 });
 
@@ -16,7 +16,7 @@ type Prop = {
 
 function ContextProvider({ children }: Prop) {
 	const [theme, setTheme] = useState<boolean>(
-		JSON.parse(localStorage.getItem("theme") || "false")
+		JSON.parse(localStorage.getItem("theme") || "true")
 	);
 
 	return (

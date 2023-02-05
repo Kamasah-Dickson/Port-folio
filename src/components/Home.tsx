@@ -12,7 +12,7 @@ function Home() {
 		<>
 			<div
 				className={`min-h-screen w-full  ${
-					theme ? "background-light" : "background-dark"
+					theme ? "background-dark" : "background-light"
 				}`}
 			>
 				<Header />
