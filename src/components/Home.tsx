@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "./Header";
 import me from "../assets/EgLF6Jmi_4x.jpg";
 import git from "../assets/github.svg";
 import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
 import fem from "../assets/frontend.svg";
-
+import { ThemeContext } from "../context/ThemeContext";
 function Home() {
+	const { theme } = useContext(ThemeContext);
 	return (
 		<>
-			<div className="min-h-screen w-full background-dark">
+			<div
+				className={`min-h-screen w-full  ${
+					theme ? "background-dark" : "background-light"
+				}`}
+			>
 				<Header />
 				<div className="flex h-full items-start justify-center">
 					{/* ===container=== */}
@@ -44,29 +49,33 @@ function Home() {
 						{/* ===social-links=== */}
 						<div className="flex items-end justify-center  mx-auto gap-5 py-5 absolute bottom-0 md:flex-col md:right-5 md:h-full">
 							<img
+								tabIndex={0}
 								className="cursor-pointer hover:scale-110 transition-all active:scale-95
                                 w-8 h-8 md:w-10 md:h-10"
 								src={git}
-								alt="github"
+								alt="github profile"
 							/>
 							<img
+								tabIndex={0}
 								className="cursor-pointer hover:scale-110 transition-all active:scale-95
                                 w-8 h-8 md:w-10 md:h-10"
 								src={twitter}
-								alt="twitter"
+								alt="twitter profile"
 							/>
 							<img
+								tabIndex={0}
 								className="cursor-pointer hover:scale-110 transition-all active:scale-95
                                 w-8 h-8 md:w-10 md:h-10"
 								src={linkedin}
-								alt="linkedin"
+								alt="linkedin profile"
 							/>
 							<img
+								tabIndex={0}
 								className="
                                 cursor-pointer hover:scale-110 transition-all active:scale-95
                                 w-8 h-8 md:w-10 md:h-10"
 								src={fem}
-								alt="frontendMentor.io"
+								alt="frontendMentor profile"
 							/>
 						</div>
 					</div>
