@@ -1,8 +1,14 @@
+import Header from "./components/Header";
+import Home from "./components/Home";
 import "./index.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 export default function App() {
-	return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+	return (
+		<>
+			<Home />
+		</>
+	);
 }
 
 // import React from "react";

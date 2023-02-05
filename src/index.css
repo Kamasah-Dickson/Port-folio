@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.background-dark {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(./assets/dark-bg-home.svg);
+	}
+	.max-width {
+		max-width: 1200px;
+		margin-inline: auto;
+		padding-inline: 0.625rem;
+	}
+	.before {
+		position: relative;
+	}
+	.before::before {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0;
+		height: 3px;
+		background-color: orange;
+		transition: all 0.3s ease;
+	}
+	.before:hover::before {
+		width: 80%;
+	}
+	.round-image {
+		width: 33.25rem;
+		height: 33.25rem;
+		border-radius: 100%;
+	}
+	.round-image2 {
+		width: 50.25rem;
+		height: 50.25rem;
+		border-radius: 100%;
+	}
+	.round-image-md {
+		width: 25.25rem;
+		height: 25.25rem;
+		border-radius: 100%;
+	}
+
+	.round-image-sm {
+		width: 18.25rem;
+		height: 18.25rem;
+		border-radius: 100%;
+	}
+	.gradient {
+		background: linear-gradient(
+			255.35deg,
+			rgba(20, 19, 40, 0) 9.21%,
+			rgba(20, 19, 40, 0.74) 51.7%
+		);
+	}
+
+	.intro {
+		position: absolute;
+		bottom: 4rem;
+		left: 0.625rem;
+		max-width: 25rem;
+
+		border-radius: 10px;
+	}
+	.move-down {
+		bottom: 15rem;
+	}
+	.move-down2 {
+		bottom: 7rem;
+	}
+	.move-down2 {
+		bottom: 15rem;
+	}
+}
