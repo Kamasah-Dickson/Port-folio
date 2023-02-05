@@ -15,7 +15,10 @@ type Prop = {
 };
 
 function ContextProvider({ children }: Prop) {
-	const [theme, setTheme] = useState<boolean>(false);
+	const [theme, setTheme] = useState<boolean>(
+		JSON.parse(localStorage.getItem("theme") || "false")
+	);
+
 	return (
 		<ThemeContext.Provider value={{ theme, setTheme }}>
 			{children}
