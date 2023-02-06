@@ -26,12 +26,13 @@ function About() {
 						About
 					</h2>
 					<p className="z-10 text-gray-200 font-light">
-						I strive to stay at the forefront of industry trends and
-						advancements, constantly seeking new and innovative ways to deliver
-						value to my clients. Whether you are looking for a partner to help
-						bring your vision to life, or simply need a reliable and skilled
-						frontend developer to take your project to the next level, I am here
-						to help. Let's work together to create something truly amazing."
+						I am An individual who strive to stay at the forefront of industry
+						trends and advancements, constantly seeking new and innovative ways
+						to deliver value to my clients. Whether you are looking for a
+						partner to help bring your vision to life, or simply need a reliable
+						and skilled frontend developer to take your project to the next
+						level, I am here to help. Let's work together to create something
+						truly amazing."
 					</p>
 				</div>
 			</div>
