@@ -13,7 +13,11 @@ function Header() {
 	}, [theme]);
 
 	return (
-		<header className="fixed top-0 shadow-lg left-0 w-full z-50  filter backdrop-saturate-150">
+		<header
+			className={`fixed top-0 shadow-lg left-0 w-full z-50 backdrop-saturate-150 ${
+				theme ? "mix-blend-normal filter" : " filter2"
+			}`}
+		>
 			<div className="flex justify-between items-center z-30 max-width h-[75px]">
 				<h1 className="cursor-pointer text-white lg:text-2xl md:text-xl text-[20px] font-bold">
 					<a href="/">
