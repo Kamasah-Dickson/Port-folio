@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+}
+
 @layer utilities {
 	.background-dark {
 		background-size: cover;
@@ -85,5 +93,66 @@
 	}
 	.move-down2 {
 		bottom: 15rem;
+	}
+
+	.section-bg {
+		position: relative;
+		z-index: 4;
+	}
+	.section-bg::before {
+		content: "ABOUT ME";
+		position: absolute;
+		top: -0rem;
+		left: -3.25rem;
+		font-size: 150px;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		transform: rotate(-0.81deg);
+		color: transparent;
+		line-height: 1;
+		z-index: -1;
+	}
+
+	@media (min-width: 750px) {
+		.section-bg::before {
+			font-size: 160px;
+		}
+	}
+	@media (min-width: 850px) {
+		.section-bg::before {
+			font-size: 180px;
+		}
+	}
+
+	.text-stroke-light {
+		-webkit-text-stroke: 1px #3d367a6c;
+	}
+	.text-stroke-dark {
+		-webkit-text-stroke: 1px rgba(151, 149, 171, 0.438);
+	}
+	/* .overlay-dark {
+		position: relative;
+	} */
+
+	.overlay-dark {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(18, 17, 41, 0.82), rgba(18, 17, 41, 0.82)),
+			url("./assets/about.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.overlay-light {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgb(25, 21, 42), rgba(25, 21, 42, 0.54)),
+			url("./assets/about.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.opa-bg {
+		background-color: #68686821;
 	}
 }

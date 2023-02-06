@@ -1,5 +1,5 @@
-import Header from "./components/Header";
 import Home from "./components/Home";
+import About from "./components/About";
 import "./index.css";
 // import { motion } from "framer-motion";
 import ContextProvider from "./context/ThemeContext";
@@ -8,6 +8,7 @@ export default function App() {
 		<>
 			<ContextProvider>
 				<Home />
+				<About />
 			</ContextProvider>
 		</>
 	);
