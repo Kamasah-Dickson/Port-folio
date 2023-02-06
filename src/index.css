@@ -110,7 +110,6 @@ body {
 		transform: rotate(-0.81deg);
 		color: transparent;
 		line-height: 1;
-		z-index: -1;
 		-webkit-text-stroke: 1px #3d367a6c;
 	}
 
@@ -145,5 +144,10 @@ body {
 	}
 	.opa-bg {
 		background-color: #121129e7;
+	}
+	.opa-bg-2 {
+		/* background-color: #121129c4; */
+		background-color: #ffffff05;
+		mix-blend-mode: difference;
 	}
 }
