@@ -13,7 +13,7 @@ function Header() {
 	}, [theme]);
 
 	return (
-		<header className="fixed top-0 shadow-sm left-0 w-full z-50  filter backdrop-saturate-50">
+		<header className="fixed top-0 shadow-lg left-0 w-full z-50  filter backdrop-saturate-150">
 			<div className="flex justify-between items-center z-30 max-width h-[75px]">
 				<h1 className="cursor-pointer text-white lg:text-2xl md:text-xl text-[20px] font-bold">
 					<a href="/">
@@ -65,13 +65,28 @@ function Header() {
 							)}
 						</li>
 					</ul>
-					<li
-						className="cursor-pointer md:hidden list-none"
-						onClick={() => setShow(true)}
-					>
-						<BiMenuAltLeft color="white" size={25} />
-					</li>
+					<ul className="md:hidden flex items-center gap-3">
+						<li
+							className="text-white cursor-pointer list-none"
+							aria-label={theme ? "toggle lightmode" : "toggle darkMode"}
+							tabIndex={0}
+							onClick={() => setTheme((prev) => !prev)}
+						>
+							{theme ? (
+								<MdLightMode color="white" size={20} />
+							) : (
+								<MdDarkMode size={20} />
+							)}
+						</li>
+						<li
+							className="cursor-pointer list-none"
+							onClick={() => setShow(true)}
+						>
+							<BiMenuAltLeft color="white" size={25} />
+						</li>
+					</ul>
 				</nav>
+
 				<MobileMenu show={show} setShow={setShow} />
 			</div>
 		</header>
