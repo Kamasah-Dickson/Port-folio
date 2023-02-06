@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-// import aboutDark from "../assets/vipul-jha-a4X1cdC1QAc-unsplash 1.svg";
 
 function About() {
 	const { theme } = useContext(ThemeContext);
@@ -9,16 +8,20 @@ function About() {
 		<div
 			id="about"
 			className={`section-bg ${
-				!theme && "bg-gray-100"
-			} overflow-hidden h-[65vh] `}
+				!theme ? "bg-gray-100" : "bg-dark-bg"
+			} overflow-hidden h-[500px] `}
 		>
 			{/* ====overlay==== */}
-			<div className="absolute right-0 top-0 -z-10 w-[50%] h-[100%] ">
+			<div className="absolute md:right-0 md:left-[unset] left-0 right-[unset] top-0 -z-10 w-[65%] h-[100%] ">
 				{/* ===img=== */}
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
-			<div className="max-width">
-				<div className="relative top-36  md:left-24 lg:left-32 shadow-md p-7 rounded-lg md:max-w-lg max-w-xl z-20 opa-bg">
+			<div className="max-width h-full">
+				<div
+					className={`relative top-36 md:left-24 shadow-md lg:left-32 p-7 rounded-lg md:max-w-lg max-w-xl -z-10 ${
+						theme ? "opa-bg" : "opa-bg-2"
+					}`}
+				>
 					<h2 className="text-white text-left text-3xl md:text-2xl lg:text-4xl uppercase font-semibold z-10 mb-2 ">
 						About
 					</h2>
