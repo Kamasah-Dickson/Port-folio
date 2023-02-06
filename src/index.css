@@ -111,6 +111,7 @@ body {
 		color: transparent;
 		line-height: 1;
 		z-index: -1;
+		-webkit-text-stroke: 1px #3d367a6c;
 	}
 
 	@media (min-width: 750px) {
@@ -123,16 +124,6 @@ body {
 			font-size: 180px;
 		}
 	}
-
-	.text-stroke-light {
-		-webkit-text-stroke: 1px #3d367a6c;
-	}
-	.text-stroke-dark {
-		-webkit-text-stroke: 1px rgba(151, 149, 171, 0.438);
-	}
-	/* .overlay-dark {
-		position: relative;
-	} */
 
 	.overlay-dark {
 		width: 100%;
@@ -153,6 +144,6 @@ body {
 		background-size: cover;
 	}
 	.opa-bg {
-		background-color: #68686821;
+		background-color: #121129e7;
 	}
 }

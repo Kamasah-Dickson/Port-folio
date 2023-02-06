@@ -9,7 +9,7 @@ function About() {
 		<div
 			id="about"
 			className={`section-bg ${
-				theme ? "text-stroke-light " : "text-stroke-dark bg-gray-100"
+				!theme && "bg-gray-100"
 			} overflow-hidden h-[65vh] `}
 		>
 			{/* ====overlay==== */}
@@ -18,15 +18,11 @@ function About() {
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
 			<div className="max-width">
-				<div className="relative top-36  md:left-24 lg:left-32 shadow-md p-5 rounded-lg md:max-w-lg max-w-xl z-20 opa-bg">
-					<h2
-						className={`${
-							theme ? "text-white" : "text-dark-bg"
-						} text-left text-3xl md:text-2xl lg:text-4xl uppercase font-semibold z-10 mb-2 `}
-					>
+				<div className="relative top-36  md:left-24 lg:left-32 shadow-md p-7 rounded-lg md:max-w-lg max-w-xl z-20 opa-bg">
+					<h2 className="text-white text-left text-3xl md:text-2xl lg:text-4xl uppercase font-semibold z-10 mb-2 ">
 						About
 					</h2>
-					<p className={`${theme ? "text-white" : "text-dark-bg"} font-light`}>
+					<p className="text-gray-200 font-light">
 						I strive to stay at the forefront of industry trends and
 						advancements, constantly seeking new and innovative ways to deliver
 						value to my clients. Whether you are looking for a partner to help
