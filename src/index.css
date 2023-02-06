@@ -188,12 +188,11 @@ body {
 	}
 	.my-grid2 {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 		align-items: center;
-		gap: 2em;
-		max-width: 650px;
-		margin-inline: auto;
+		gap: 1em;
 	}
+	.my-grid2 a,
 	.my-grid2 a img {
 		width: 100%;
 		display: block;

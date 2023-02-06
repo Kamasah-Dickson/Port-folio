@@ -31,32 +31,56 @@ function MobileMenu({ show, setShow }: showInterface) {
 					className={`flex flex-col h-screen w-full items-center justify-center gap-5`}
 				>
 					<li className="text-white active:scale-x-105 list-none">
-						<a className=" text-lg font-medium before" href="#home">
+						<a
+							className=" text-lg font-medium before"
+							href="#home"
+							onClick={() => setShow(false)}
+						>
 							HOME
 						</a>
 					</li>
 					<li className="text-white active:scale-x-105">
-						<a className=" text-lg font-medium before" href="#about">
+						<a
+							className=" text-lg font-medium before"
+							href="#about"
+							onClick={() => setShow(false)}
+						>
 							ABOUT
 						</a>
 					</li>
 					<li className="text-white active:scale-x-105">
-						<a className=" text-lg font-medium before" href="#hire-me">
+						<a
+							className=" text-lg font-medium before"
+							href="#hire-me"
+							onClick={() => setShow(false)}
+						>
 							HIRE ME
 						</a>
 					</li>
 					<li className="text-white active:scale-x-105">
-						<a className=" text-lg font-medium before" href="#technologies">
+						<a
+							className=" text-lg font-medium before"
+							href="#technologies"
+							onClick={() => setShow(false)}
+						>
 							TECHNOLOGIES
 						</a>
 					</li>
 					<li className="text-white active:scale-x-105">
-						<a className=" text-lg font-medium before" href="#projects">
+						<a
+							className=" text-lg font-medium before"
+							href="#projects"
+							onClick={() => setShow(false)}
+						>
 							PROJECTS
 						</a>
 					</li>
 					<li className="text-white active:scale-x-105">
-						<a className=" text-sm font-medium before" href="#contact">
+						<a
+							className=" text-sm font-medium before"
+							href="#contact"
+							onClick={() => setShow(false)}
+						>
 							CONTACT
 						</a>
 					</li>
