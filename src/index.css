@@ -104,7 +104,7 @@ body {
 		position: absolute;
 		top: -0rem;
 		left: -3.25rem;
-		font-size: 150px;
+		font-size: 120px;
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		transform: rotate(-0.81deg);
@@ -147,7 +147,7 @@ body {
 	}
 	.opa-bg-2 {
 		/* background-color: #121129c4; */
-		background-color: #ffffff05;
+		background-color: #ffffff15;
 		mix-blend-mode: difference;
 	}
 }

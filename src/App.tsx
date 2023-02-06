@@ -3,12 +3,14 @@ import About from "./components/About";
 import "./index.css";
 // import { motion } from "framer-motion";
 import ContextProvider from "./context/ThemeContext";
+import HireMe from "./components/HireMe";
 export default function App() {
 	return (
 		<>
 			<ContextProvider>
 				<Home />
 				<About />
+				<HireMe />
 			</ContextProvider>
 		</>
 	);
