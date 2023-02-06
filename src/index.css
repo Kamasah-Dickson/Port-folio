@@ -24,7 +24,7 @@ body {
 		background-image: url(./assets/light-bg-home.svg);
 	}
 	.max-width {
-		max-width: 1200px;
+		max-width: 75rem;
 		margin-inline: auto;
 		padding-inline: 0.625rem;
 	}
@@ -35,10 +35,14 @@ body {
 		background-color: rgba(255, 255, 255, 0.075);
 		backdrop-filter: blur(3px);
 	}
+	.filter2 {
+		background-color: rgba(0, 0, 0, 0.281);
+		backdrop-filter: blur(3px);
+	}
 	.before::before {
 		content: "";
 		position: absolute;
-		bottom: -5px;
+		bottom: -0.3125em;
 		left: 0;
 		width: 0;
 		height: 3px;
@@ -83,7 +87,7 @@ body {
 		left: 0.625rem;
 		max-width: 25rem;
 
-		border-radius: 10px;
+		border-radius: 0.625rem;
 	}
 	.move-down {
 		bottom: 15rem;
@@ -104,7 +108,7 @@ body {
 		position: absolute;
 		top: -0rem;
 		left: -3.25rem;
-		font-size: 120px;
+		font-size: 7.5rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		transform: rotate(-0.81deg);
@@ -112,15 +116,42 @@ body {
 		line-height: 1;
 		-webkit-text-stroke: 1px #3d367a6c;
 	}
+	.why-hire::before {
+		content: "WHY HIRE ME";
+		position: absolute;
+		top: -0rem;
+		left: -2.25rem;
+		font-size: 8.5rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		transform: rotate(-0.81deg);
+		rotate: -2.2deg;
+		color: transparent;
+		line-height: 1;
+		-webkit-text-stroke: 1px #3d367a6c;
+	}
+	.tech::before {
+		content: "MY TECH STACK";
+		position: absolute;
+		top: -0rem;
+		left: 4.25rem;
+		font-size: 10.5rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		transform: rotate(2.81deg);
+		color: transparent;
+		line-height: 1;
+		-webkit-text-stroke: 1px #3d367a36;
+	}
 
-	@media (min-width: 750px) {
+	@media (min-width: 46.875em) {
 		.section-bg::before {
-			font-size: 160px;
+			font-size: 10rem;
 		}
 	}
-	@media (min-width: 850px) {
+	@media (min-width: 53.125em) {
 		.section-bg::before {
-			font-size: 180px;
+			font-size: 11.25rem;
 		}
 	}
 
@@ -149,5 +180,23 @@ body {
 		/* background-color: #121129c4; */
 		background-color: #ffffff15;
 		mix-blend-mode: difference;
+	}
+	.my-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+		gap: 1.25em;
+	}
+	.my-grid2 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		align-items: center;
+		gap: 2em;
+		max-width: 650px;
+		margin-inline: auto;
+	}
+	.my-grid2 a img {
+		width: 100%;
+		display: block;
+		height: auto;
 	}
 }
