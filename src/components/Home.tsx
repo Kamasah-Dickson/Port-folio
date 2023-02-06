@@ -6,11 +6,15 @@ import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
 import fem from "../assets/frontend.svg";
 import { ThemeContext } from "../context/ThemeContext";
+
 function Home() {
 	const { theme } = useContext(ThemeContext);
+	document.body.className = `${theme ? "bg-dark-bg" : "bg-white"}`;
+
 	return (
 		<>
 			<div
+				id="home"
 				className={`min-h-screen w-full  ${
 					theme ? "background-dark" : "background-light"
 				}`}
