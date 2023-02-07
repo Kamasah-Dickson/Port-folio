@@ -17,7 +17,7 @@ function Technologies() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div
-			className="  h-full pt-48 pb-24 tech overflow-hidden relative"
+			className="  h-full pt-48 pb-36 tech overflow-hidden relative "
 			id="technologies"
 		>
 			<h3
