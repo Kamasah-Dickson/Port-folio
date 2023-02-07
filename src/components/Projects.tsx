@@ -67,18 +67,20 @@ function Projects() {
 							/>
 						</div>
 					</SwiperSlide>
-
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px]w-[300px]`}
+						}         cursor-grab rounded-[50px] w-[300px] `}
 					>
-						<img
-							src={nft}
-							alt=""
-							className="shadow-2xl md:h-[450px] h-[400px] object-cover rounded-[50px] w-full"
-						/>
+						<div>
+							<img
+								src={nft}
+								alt=""
+								className="md:h-[450px] h-[400px] object-cover rounded-[50px] w-full"
+							/>
+						</div>
 					</SwiperSlide>
+
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
