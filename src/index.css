@@ -117,16 +117,16 @@ body {
 		line-height: 1;
 		-webkit-text-stroke: 1px #3d367a6c;
 	}
+
 	.why-hire::before {
 		content: "WHY HIRE ME";
-		position: absolute;
-		top: -0rem;
+		position: relative;
+		top: 0;
 		left: -2.25rem;
 		font-size: 8rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		transform: rotate(-0.81deg);
-		rotate: -2.2deg;
 		color: transparent;
 		line-height: 1;
 		-webkit-text-stroke: 1px #3d367a6c;
@@ -137,6 +137,19 @@ body {
 		top: -0rem;
 		left: 4.25rem;
 		font-size: 10rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		transform: rotate(2.81deg);
+		color: transparent;
+		line-height: 1;
+		-webkit-text-stroke: 1px #3d367a36;
+	}
+	.project::before {
+		content: "MY PROJECTS";
+		position: absolute;
+		top: -5rem;
+		left: 5.25rem;
+		font-size: 6rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		transform: rotate(2.81deg);
@@ -183,7 +196,7 @@ body {
 	}
 	.my-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
 		gap: 1.25em;
 	}
 	.my-grid2 {
@@ -197,5 +210,17 @@ body {
 		width: 100%;
 		display: block;
 		height: auto;
+	}
+	.my-shadow {
+		box-shadow: 1rem 1rem 1rem -0.3rem rgba(120, 121, 201, 0.096);
+	}
+	/* .my-shadow-red {
+		box-shadow: 1rem 1rem -0.5rem #e7565654;
+	} */
+	.my-shadow-hover2 {
+		box-shadow: 1rem 1rem 1rem -0.2rem rgba(0, 0, 0, 0.055);
+	}
+	.my-shadow-hover {
+		box-shadow: 1rem 1rem 1rem -0.2rem rgba(0, 0, 0, 0.164);
 	}
 }
