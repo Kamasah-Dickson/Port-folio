@@ -26,7 +26,7 @@ function About() {
 						About
 					</h2>
 					<p className="z-10 font-light text-gray-200">
-						I am An individual who strive to stay at the forefront of industry
+						I am an individual who strive to stay at the forefront of industry
 						trends and advancements, constantly seeking new and innovative ways
 						to deliver value to my clients. Whether you are looking for a
 						partner to help bring your vision to life, or simply need a reliable
