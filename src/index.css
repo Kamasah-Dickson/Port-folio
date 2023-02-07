@@ -29,6 +29,11 @@ body {
 		margin-inline: auto;
 		padding-inline: 0.625rem;
 	}
+	.max-width2 {
+		max-width: 87.5rem;
+		margin-inline: auto;
+		padding-inline: 0.625rem;
+	}
 	.before {
 		position: relative;
 	}
@@ -135,27 +140,27 @@ body {
 		content: "MY TECH STACK";
 		position: absolute;
 		top: -0rem;
-		left: 4.25rem;
-		font-size: 10rem;
+		left: 1.25rem;
+		font-size: 8rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		transform: rotate(2.81deg);
 		color: transparent;
 		line-height: 1;
-		-webkit-text-stroke: 1px #3d367a36;
+		-webkit-text-stroke: 1px #3d367a1f;
 	}
 	.project::before {
 		content: "MY PROJECTS";
 		position: absolute;
-		top: -5rem;
-		left: 5.25rem;
-		font-size: 6rem;
+		top: -7rem;
+		left: -1rem;
+		font-size: 10rem;
 		font-weight: 700;
 		letter-spacing: -0.02em;
-		transform: rotate(2.81deg);
+		transform: rotate(-2.81deg);
 		color: transparent;
 		line-height: 1;
-		-webkit-text-stroke: 1px #3d367a36;
+		-webkit-text-stroke: 1px #3d367a1e;
 	}
 
 	@media (min-width: 46.875em) {
@@ -201,8 +206,8 @@ body {
 	}
 	.my-grid2 {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-		align-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		align-items: flex-start;
 		gap: 1em;
 	}
 	.my-grid2 a,
@@ -214,9 +219,7 @@ body {
 	.my-shadow {
 		box-shadow: 1rem 1rem 1rem -0.3rem rgba(120, 121, 201, 0.096);
 	}
-	/* .my-shadow-red {
-		box-shadow: 1rem 1rem -0.5rem #e7565654;
-	} */
+
 	.my-shadow-hover2 {
 		box-shadow: 1rem 1rem 1rem -0.2rem rgba(0, 0, 0, 0.055);
 	}
