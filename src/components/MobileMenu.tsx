@@ -16,23 +16,23 @@ function MobileMenu({ show, setShow }: showInterface) {
 		<div
 			className={` ${
 				show ? "translate-x-0" : "translate-x-full"
-			} min-h-screen w-4/5 fixed top-0 right-0 z-50 md:hidden text-white transition-transform`}
+			} fixed top-0 right-0 z-50 min-h-screen w-4/5 text-white transition-transform md:hidden`}
 		>
 			<nav
 				className={`${theme ? "bg-dark-bg" : "bg-gray-900"} bg-opacity-[0.97]`}
 			>
 				<div
-					className="absolute top-12 cursor-pointer right-7"
+					className="absolute top-12 right-7 cursor-pointer"
 					onClick={() => setShow(false)}
 				>
 					<IoMdCloseCircle size={30} />
 				</div>
 				<ul
-					className={`flex flex-col h-screen w-full items-center justify-center gap-5`}
+					className={`flex h-screen w-full flex-col items-center justify-center gap-5`}
 				>
-					<li className="text-white active:scale-x-105 list-none">
+					<li className="list-none text-white active:scale-x-105">
 						<a
-							className=" text-lg font-medium before"
+							className=" before text-lg font-medium"
 							href="#home"
 							onClick={() => setShow(false)}
 						>
@@ -41,7 +41,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 					</li>
 					<li className="text-white active:scale-x-105">
 						<a
-							className=" text-lg font-medium before"
+							className=" before text-lg font-medium"
 							href="#about"
 							onClick={() => setShow(false)}
 						>
@@ -50,7 +50,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 					</li>
 					<li className="text-white active:scale-x-105">
 						<a
-							className=" text-lg font-medium before"
+							className=" before text-lg font-medium"
 							href="#hire-me"
 							onClick={() => setShow(false)}
 						>
@@ -59,7 +59,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 					</li>
 					<li className="text-white active:scale-x-105">
 						<a
-							className=" text-lg font-medium before"
+							className=" before text-lg font-medium"
 							href="#technologies"
 							onClick={() => setShow(false)}
 						>
@@ -68,7 +68,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 					</li>
 					<li className="text-white active:scale-x-105">
 						<a
-							className=" text-lg font-medium before"
+							className=" before text-lg font-medium"
 							href="#projects"
 							onClick={() => setShow(false)}
 						>
@@ -77,7 +77,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 					</li>
 					<li className="text-white active:scale-x-105">
 						<a
-							className=" text-sm font-medium before"
+							className=" before text-sm font-medium"
 							href="#contact"
 							onClick={() => setShow(false)}
 						>
@@ -85,7 +85,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 						</a>
 					</li>
 					<li
-						className="text-white cursor-pointer"
+						className="cursor-pointer text-white"
 						aria-label={theme ? "toggle lightmode" : "toggle darkMode"}
 						tabIndex={0}
 						onClick={() => setTheme((prev) => !prev)}

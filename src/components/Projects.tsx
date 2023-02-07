@@ -23,20 +23,20 @@ function Projects() {
 			id="projects"
 		>
 			<h3
-				className={`z-10 relative project ${
+				className={`project relative z-10 ${
 					!theme ? "text-dark-bg" : "text-white"
-				}  text-3xl md:text-2xl lg:text-4xl uppercase font-semibold mb-3 text-center`}
+				}  mb-3 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
 			>
 				Projects
 			</h3>
 			<h4
 				className={`z-10 ${
 					!theme ? "text-gray-600" : "text-gray-300"
-				}  text-xl lg:text-2xl uppercase font-normal mb-10 text-center`}
+				}  mb-10 text-center text-xl font-normal uppercase lg:text-2xl`}
 			>
 				Highlighting My Expertise
 			</h4>
-			<div className="relative max-width2 overflow-hidden z-10 ">
+			<div className="max-width2 relative z-10 overflow-hidden ">
 				<Swiper
 					className="mt-6"
 					// install Swiper modules
@@ -57,26 +57,26 @@ function Projects() {
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px] w-[300px] `}
+						}         w-[300px] cursor-grab rounded-[50px] `}
 					>
 						<div>
 							<img
 								src={iphone}
 								alt=""
-								className="md:h-[450px] h-[400px] object-cover rounded-[50px] w-full"
+								className="h-[400px] w-full rounded-[50px] object-cover md:h-[450px]"
 							/>
 						</div>
 					</SwiperSlide>
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px] w-[300px] `}
+						}         w-[300px] cursor-grab rounded-[50px] `}
 					>
 						<div>
 							<img
 								src={nft}
 								alt=""
-								className="md:h-[450px] h-[400px] object-cover rounded-[50px] w-full"
+								className="h-[400px] w-full rounded-[50px] object-cover md:h-[450px]"
 							/>
 						</div>
 					</SwiperSlide>
@@ -84,34 +84,34 @@ function Projects() {
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px] w-[300px]`}
+						}         w-[300px] cursor-grab rounded-[50px]`}
 					>
 						<img
 							src={cinema}
 							alt=""
-							className="shadow-2xl md:h-[450px] h-[400px] object-cover object-top rounded-[50px] w-full"
+							className="h-[400px] w-full rounded-[50px] object-cover object-top shadow-2xl md:h-[450px]"
 						/>
 					</SwiperSlide>
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px] w-[300px]`}
+						}         w-[300px] cursor-grab rounded-[50px]`}
 					>
 						<img
 							src={countries}
 							alt=""
-							className="shadow-2xl md:h-[450px] h-[400px] object-cover object-top rounded-[50px] w-full"
+							className="h-[400px] w-full rounded-[50px] object-cover object-top shadow-2xl md:h-[450px]"
 						/>
 					</SwiperSlide>
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
-						}         cursor-grab rounded-[50px] w-[300px]`}
+						}         w-[300px] cursor-grab rounded-[50px]`}
 					>
 						<img
 							src={form}
 							alt=""
-							className="shadow-2xl md:h-[450px] h-[400px] object-cover object-top rounded-[50px] w-full"
+							className="h-[400px] w-full rounded-[50px] object-cover object-top shadow-2xl md:h-[450px]"
 						/>
 					</SwiperSlide>
 					<div className="mt-[50px]"></div>

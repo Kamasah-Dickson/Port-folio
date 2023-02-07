@@ -12,15 +12,15 @@ import PerfectLight from "../assets/perfectionist.svg";
 function HireMe() {
 	const { theme } = useContext(ThemeContext);
 	return (
-		<div id="hire-me" className="py-[50px] why-hire relative">
+		<div id="hire-me" className="why-hire relative py-[50px]">
 			<h3
-				className={`z-10 relative ${
+				className={`relative z-10 ${
 					!theme ? "text-dark-bg" : "text-white"
-				}  text-3xl md:text-2xl lg:text-4xl uppercase font-semibold mb-16 text-center`}
+				}  mb-16 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
 			>
 				WHY HIRE ME
 			</h3>
-			<div className="max-width h-full my-grid z-10 relative ">
+			<div className="max-width my-grid relative z-10 h-full ">
 				<div className="text-center">
 					<img
 						className="m-auto"
@@ -30,7 +30,7 @@ function HireMe() {
 					<h3
 						className={`${
 							theme ? "text-white" : "text-dark-bg"
-						} font-medium text-2xl md:text-3xl my-3
+						} my-3 text-2xl font-medium md:text-3xl
 						`}
 					>
 						Communicative
@@ -38,7 +38,7 @@ function HireMe() {
 					<p
 						className={`${
 							theme ? "text-gray-400" : "text-dark-bg"
-						} font-light text-lg my-3
+						} my-3 text-lg font-light
 						`}
 					>
 						I have a broad understanding of verbal vocabulary. Therefore, I can
@@ -54,7 +54,7 @@ function HireMe() {
 					<h3
 						className={`${
 							theme ? "text-white" : "text-dark-bg"
-						} font-medium text-2xl md:text-3xl my-3
+						} my-3 text-2xl font-medium md:text-3xl
 						`}
 					>
 						Cooperative
@@ -62,7 +62,7 @@ function HireMe() {
 					<p
 						className={`${
 							theme ? "text-gray-400" : "text-dark-bg"
-						} font-light text-lg my-3
+						} my-3 text-lg font-light
 						`}
 					>
 						Behind the successful projects, there’s a great team. I can build a
@@ -78,7 +78,7 @@ function HireMe() {
 					<h3
 						className={`${
 							theme ? "text-white" : "text-dark-bg"
-						} font-medium text-2xl md:text-3xl my-3
+						} my-3 text-2xl font-medium md:text-3xl
 						`}
 					>
 						Workaholic
@@ -86,7 +86,7 @@ function HireMe() {
 					<p
 						className={`${
 							theme ? "text-gray-400" : "text-dark-bg"
-						} font-light text-lg my-3
+						} my-3 text-lg font-light
 						`}
 					>
 						I’m a kind of person who can’t stand around doing nothing. I have a
@@ -102,7 +102,7 @@ function HireMe() {
 					<h3
 						className={`${
 							theme ? "text-white" : "text-dark-bg"
-						} font-medium text-2xl md:text-3xl my-3
+						} my-3 text-2xl font-medium md:text-3xl
 						`}
 					>
 						Perfectionist
@@ -110,7 +110,7 @@ function HireMe() {
 					<p
 						className={`${
 							theme ? "text-gray-400" : "text-dark-bg"
-						} font-light text-lg my-3
+						} my-3 text-lg font-light
 						`}
 					>
 						I have a strong intuition and have remained consistent with high

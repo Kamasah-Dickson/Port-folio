@@ -17,55 +17,55 @@ function Technologies() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div
-			className="  h-full pt-48 pb-36 tech overflow-hidden relative "
+			className="  tech relative h-full overflow-hidden pt-48 pb-36 "
 			id="technologies"
 		>
 			<h3
-				className={`z-10 relative ${
+				className={`relative z-10 ${
 					!theme ? "text-dark-bg" : "text-white"
-				}  text-3xl md:text-2xl lg:text-4xl uppercase font-semibold mb-5 text-center`}
+				}  mb-5 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
 			>
 				MY TECH STACK
 			</h3>
 			<h5
-				className={`z-10 relative ${
+				className={`relative z-10 ${
 					!theme ? "text-dark-bg" : "text-white"
-				}  text-lg  uppercase font-medium text-center`}
+				}  text-center  text-lg font-medium uppercase`}
 			>
 				TECHNOLOGIES I'VE BEEN WORKING WITH
 			</h5>
-			<div className="max-width my-grid2 mt-16 h-full z-10 relative flex flex-wrap gap-5">
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+			<div className="max-width my-grid2 relative z-10 mt-16 flex h-full flex-wrap gap-5">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={react} alt="React js" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={javaScript} alt="javaScript" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={typeScript} alt="typeScript" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={gsap} alt="gsap" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={sass} alt="gsap" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={redux} alt="redux" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={git} alt="git" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={html} alt="html" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={css} alt="css" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={github} alt="github" />
 				</a>
-				<a href="#" className="hover:scale-110 transition-all active:scale-95">
+				<a href="#" className="transition-all hover:scale-110 active:scale-95">
 					<img src={tailwind} alt="tailwind css" />
 				</a>
 			</div>
