@@ -16,7 +16,10 @@ import tailwind from "../assets/tailwind.svg";
 function Technologies() {
 	const { theme } = useContext(ThemeContext);
 	return (
-		<div className="py-[50px] tech overflow-hidden relative" id="technologies">
+		<div
+			className="  h-full pt-48 pb-24 tech overflow-hidden relative"
+			id="technologies"
+		>
 			<h3
 				className={`z-10 relative ${
 					!theme ? "text-dark-bg" : "text-white"
