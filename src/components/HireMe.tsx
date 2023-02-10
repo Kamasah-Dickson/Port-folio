@@ -16,7 +16,7 @@ function HireMe() {
 	return (
 		<div id="hire-me" className="why-hire relative py-[50px]">
 			<div
-				className="mb-20 overflow-hidden
+				className="mb-14 overflow-hidden
 			"
 			>
 				<motion.h3
@@ -26,6 +26,7 @@ function HireMe() {
 						y: "0",
 						transition: { delay: 0.5, duration: 1.2 },
 					}}
+					viewport={{ once: true }}
 					className={`relative z-10 ${
 						!theme ? "text-dark-bg" : "text-white"
 					}   text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
@@ -38,6 +39,7 @@ function HireMe() {
 				variants={container}
 				initial="hidden"
 				whileInView="show"
+				viewport={{ once: true }}
 				className="max-width my-grid relative z-10 h-full "
 			>
 				<motion.div variants={item} className="text-center">
