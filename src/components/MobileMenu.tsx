@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
 import { IoMdCloseCircle } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
+import { container, item } from "../animation";
 
 interface showInterface {
 	show: boolean;
@@ -27,76 +29,98 @@ function MobileMenu({ show, setShow }: showInterface) {
 				>
 					<IoMdCloseCircle size={30} />
 				</div>
-				<ul
-					className={`flex h-screen w-full flex-col items-center justify-center gap-5`}
-				>
-					<li className="list-none text-white active:scale-x-105">
-						<a
-							className=" before text-lg font-medium"
-							href="#home"
-							onClick={() => setShow(false)}
-						>
-							HOME
-						</a>
-					</li>
-					<li className="text-white active:scale-x-105">
-						<a
-							className=" before text-lg font-medium"
-							href="#about"
-							onClick={() => setShow(false)}
-						>
-							ABOUT
-						</a>
-					</li>
-					<li className="text-white active:scale-x-105">
-						<a
-							className=" before text-lg font-medium"
-							href="#hire-me"
-							onClick={() => setShow(false)}
-						>
-							HIRE ME
-						</a>
-					</li>
-					<li className="text-white active:scale-x-105">
-						<a
-							className=" before text-lg font-medium"
-							href="#technologies"
-							onClick={() => setShow(false)}
-						>
-							TECHNOLOGIES
-						</a>
-					</li>
-					<li className="text-white active:scale-x-105">
-						<a
-							className=" before text-lg font-medium"
-							href="#projects"
-							onClick={() => setShow(false)}
-						>
-							PROJECTS
-						</a>
-					</li>
-					<li className="text-white active:scale-x-105">
-						<a
-							className=" before text-sm font-medium"
-							href="#contact"
-							onClick={() => setShow(false)}
-						>
-							CONTACT
-						</a>
-					</li>
-					<li
-						className="cursor-pointer text-white"
-						aria-label={theme ? "toggle lightmode" : "toggle darkMode"}
-						tabIndex={0}
-						onClick={() => setTheme((prev) => !prev)}
+				<AnimatePresence>
+					<motion.ul
+						key={5}
+						variants={container}
+						initial="hidden"
+						animate="show"
+						className={`flex h-screen w-full flex-col items-center justify-center gap-5`}
 					>
-						{theme ? (
-							<MdLightMode color="white" size={20} />
-						) : (
-							<MdDarkMode size={20} />
-						)}
-					</li>
-				</ul>
+						<motion.li
+							variants={item}
+							className="list-none text-white active:scale-x-105"
+						>
+							<a
+								className=" before text-lg font-medium"
+								href="#home"
+								onClick={() => setShow(false)}
+							>
+								HOME
+							</a>
+						</motion.li>
+						<li className="text-white active:scale-x-105">
+							<a
+								className=" before text-lg font-medium"
+								href="#about"
+								onClick={() => setShow(false)}
+							>
+								ABOUT
+							</a>
+						</li>
+						<motion.li
+							variants={item}
+							className="text-white active:scale-x-105"
+						>
+							<a
+								className=" before text-lg font-medium"
+								href="#hire-me"
+								onClick={() => setShow(false)}
+							>
+								HIRE ME
+							</a>
+						</motion.li>
+						<motion.li
+							variants={item}
+							className="text-white active:scale-x-105"
+						>
+							<a
+								className=" before text-lg font-medium"
+								href="#technologies"
+								onClick={() => setShow(false)}
+							>
+								TECHNOLOGIES
+							</a>
+						</motion.li>
+						<motion.li
+							variants={item}
+							className="text-white active:scale-x-105"
+						>
+							<a
+								className=" before text-lg font-medium"
+								href="#projects"
+								onClick={() => setShow(false)}
+							>
+								PROJECTS
+							</a>
+						</motion.li>
+						<motion.li
+							variants={item}
+							className="text-white active:scale-x-105"
+						>
+							<a
+								className=" before text-sm font-medium"
+								href="#contact"
+								onClick={() => setShow(false)}
+							>
+								CONTACT
+							</a>
+						</motion.li>
+						<motion.li
+							variants={item}
+							className="cursor-pointer text-white"
+							aria-label={theme ? "toggle lightmode" : "toggle darkMode"}
+							tabIndex={0}
+							onClick={() => setTheme((prev) => !prev)}
+						>
+							{theme ? (
+								<MdLightMode color="white" size={20} />
+							) : (
+								<MdDarkMode size={20} />
+							)}
+						</motion.li>
+					</motion.ul>
+				</AnimatePresence>
 			</nav>
 		</div>
 	);
