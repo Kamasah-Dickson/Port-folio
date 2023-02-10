@@ -47,13 +47,13 @@ function Home() {
 						<AnimatePresence>
 							<motion.div
 								key={1}
-								initial={{ opacity: 0, y: "10%" }}
-								animate={{ opacity: 1, y: "0%" }}
-								transition={{ duration: 0.3, ease: "linear", delay: 1.5 }}
-								className="intro gradient lg:move-down2 2xl:move-dwn3 mb-[25px]
-                            p-5
-                            text-white
-                        "
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								transition={{ duration: 0.4, ease: "easeIn", delay: 2 }}
+								className="intro gradient lg:move-down2 2xl:move-dwn3 mb-[25px] p-5
+								text-white
+								sm:mb-0 
+								"
 							>
 								<h2 className="mb-3 text-xl font-bold sm:text-2xl">HELLO,</h2>
 								<p className="text-md font-light sm:text-lg">
@@ -73,39 +73,50 @@ function Home() {
 								whileInView="show"
 								className="absolute bottom-[10px] mx-auto  flex items-end justify-center gap-5 py-5 md:right-5 md:h-full md:flex-col"
 							>
-								<motion.img
-									variants={item}
-									tabIndex={0}
-									className="mw-10 h-10
+								<a
+									title="github profile"
+									href="https://github.com/Kamasah-Dickson"
+								>
+									<motion.img
+										variants={item}
+										tabIndex={0}
+										className="mw-10 h-10
+									cursor-pointer transition-all hover:scale-110 active:scale-95"
+										src={git}
+										alt="github profile"
+									/>
+								</a>
+								<a href="" title="twitter profile">
+									<motion.img
+										variants={item}
+										tabIndex={0}
+										className=" h-10 w-10
                                 cursor-pointer transition-all hover:scale-110 active:scale-95"
-									src={git}
-									alt="github profile"
-								/>
-								<motion.img
-									variants={item}
-									tabIndex={0}
-									className=" h-10 w-10
-                                cursor-pointer transition-all hover:scale-110 active:scale-95"
-									src={twitter}
-									alt="twitter profile"
-								/>
-								<motion.img
-									variants={item}
-									tabIndex={0}
-									className=" h-10 w-10
-                                cursor-pointer transition-all hover:scale-110 active:scale-95"
-									src={linkedin}
-									alt="linkedin profile"
-								/>
-								<motion.img
-									variants={item}
-									tabIndex={0}
-									className="
-                                h-10 w-10
-                                cursor-pointer transition-all hover:scale-110 active:scale-95"
-									src={fem}
-									alt="frontendMentor profile"
-								/>
+										src={twitter}
+										alt="twitter profile"
+									/>
+								</a>
+								<a href="" title="linkedin profile">
+									<motion.img
+										variants={item}
+										tabIndex={0}
+										className=" h-10 w-10
+									cursor-pointer transition-all hover:scale-110 active:scale-95"
+										src={linkedin}
+										alt="linkedin profile"
+									/>
+								</a>
+								<a href="" title="frontendMentor profile">
+									<motion.img
+										variants={item}
+										tabIndex={0}
+										className="
+									h-10 w-10
+									cursor-pointer transition-all hover:scale-110 active:scale-95"
+										src={fem}
+										alt="frontendMentor profile"
+									/>
+								</a>
 							</motion.div>
 						</AnimatePresence>
 					</div>
