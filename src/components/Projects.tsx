@@ -13,36 +13,58 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { motion } from "framer-motion";
 function Projects() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div
 			className={` pt-28 ${
 				theme ? "bg-dark-bg" : "bg-[#60585804]"
-			} overflow-x-hidden`}
+			} project relative overflow-x-hidden `}
 			id="projects"
 		>
-			<h3
-				className={`project relative z-10 ${
-					!theme ? "text-dark-bg" : "text-white"
-				}  mb-3 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
+			<div className="overflow-hidden ">
+				<motion.h3
+					initial={{ opacity: 0, y: "100%" }}
+					whileInView={{
+						opacity: 1,
+						y: "0",
+						transition: { delay: 1, duration: 1 },
+					}}
+					className={`z-10 ${
+						!theme ? "text-dark-bg" : "text-white"
+					}  mb-3 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
+				>
+					Projects
+				</motion.h3>
+				<motion.h4
+					initial={{ opacity: 0, y: "100%" }}
+					whileInView={{
+						opacity: 1,
+						y: "0",
+						transition: { delay: 1.2, duration: 1 },
+					}}
+					className={`z-10 ${
+						!theme ? "text-gray-600" : "text-gray-300"
+					}  mb-10 text-center text-xl font-normal uppercase lg:text-2xl`}
+				>
+					Highlighting My Expertise
+				</motion.h4>
+			</div>
+			<motion.div
+				initial={{ opacity: 0, x: "10%" }}
+				whileInView={{
+					opacity: 1,
+					x: "0%",
+					transition: { delay: 1.2, duration: 1 },
+				}}
+				className="max-width2 relative z-10"
 			>
-				Projects
-			</h3>
-			<h4
-				className={`z-10 ${
-					!theme ? "text-gray-600" : "text-gray-300"
-				}  mb-10 text-center text-xl font-normal uppercase lg:text-2xl`}
-			>
-				Highlighting My Expertise
-			</h4>
-			<div className="max-width2 relative z-10 overflow-hidden ">
 				<Swiper
-					className="mt-6"
+					className="mt-6 "
 					// install Swiper modules
 					modules={[Navigation, Pagination, A11y]}
 					spaceBetween={40}
-					// slidesPerView={3}
 					breakpoints={{
 						700: {
 							slidesPerView: 2,
@@ -116,7 +138,7 @@ function Projects() {
 					</SwiperSlide>
 					<div className="mt-[50px]"></div>
 				</Swiper>
-			</div>
+			</motion.div>
 		</div>
 	);
 }
