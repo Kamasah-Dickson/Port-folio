@@ -8,20 +8,39 @@ import workDark from "../assets/WORK-dark.svg";
 import workLight from "../assets/WORK.svg";
 import PerfectDark from "../assets/perfectionist-dark.svg";
 import PerfectLight from "../assets/perfectionist.svg";
+import { container, item } from "../animation";
+import { motion } from "framer-motion";
 
 function HireMe() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div id="hire-me" className="why-hire relative py-[50px]">
-			<h3
-				className={`relative z-10 ${
-					!theme ? "text-dark-bg" : "text-white"
-				}  mb-16 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
+			<div
+				className="mb-20 overflow-hidden
+			"
 			>
-				WHY HIRE ME
-			</h3>
-			<div className="max-width my-grid relative z-10 h-full ">
-				<div className="text-center">
+				<motion.h3
+					initial={{ opacity: 0, y: "100%" }}
+					whileInView={{
+						opacity: 1,
+						y: "0",
+						transition: { delay: 0.5, duration: 1.2 },
+					}}
+					className={`relative z-10 ${
+						!theme ? "text-dark-bg" : "text-white"
+					}   text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
+				>
+					WHY HIRE ME
+				</motion.h3>
+			</div>
+			<motion.div
+				key={6}
+				variants={container}
+				initial="hidden"
+				whileInView="show"
+				className="max-width my-grid relative z-10 h-full "
+			>
+				<motion.div variants={item} className="text-center">
 					<img
 						className="m-auto"
 						src={theme ? chatDark : chatLight}
@@ -44,8 +63,8 @@ function HireMe() {
 						I have a broad understanding of verbal vocabulary. Therefore, I can
 						convey a message well among peers.
 					</p>
-				</div>
-				<div className="text-center">
+				</motion.div>
+				<motion.div variants={item} className="text-center">
 					<img
 						className="m-auto"
 						src={theme ? likeDark : likeLight}
@@ -68,8 +87,8 @@ function HireMe() {
 						Behind the successful projects, there’s a great team. I can build a
 						good cooperation and remain consistent with the goal.
 					</p>
-				</div>
-				<div className="text-center">
+				</motion.div>
+				<motion.div variants={item} className="text-center">
 					<img
 						className="m-auto"
 						src={theme ? workDark : workLight}
@@ -92,8 +111,8 @@ function HireMe() {
 						I’m a kind of person who can’t stand around doing nothing. I have a
 						tendency of doing something productive.
 					</p>
-				</div>
-				<div className="text-center">
+				</motion.div>
+				<motion.div variants={item} className="text-center">
 					<img
 						className="m-auto"
 						src={theme ? PerfectDark : PerfectLight}
@@ -116,8 +135,8 @@ function HireMe() {
 						I have a strong intuition and have remained consistent with high
 						quality standards to present a most worthy results.
 					</p>
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 }
