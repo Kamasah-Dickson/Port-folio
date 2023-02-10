@@ -25,6 +25,7 @@ function Contact() {
 								y: "0",
 								transition: { delay: 1, duration: 1 },
 							}}
+							viewport={{ once: true }}
 							className="mb-3 px-3 text-left text-4xl font-bold"
 						>
 							Contact
@@ -36,6 +37,7 @@ function Contact() {
 								y: "0",
 								transition: { delay: 1.2, duration: 1 },
 							}}
+							viewport={{ once: true }}
 							className="text-md  max-w-md px-3  font-light"
 						>
 							For business and partnership inquiry please contact me below!
@@ -50,6 +52,7 @@ function Contact() {
 									y: "0",
 									transition: { delay: 1.5, duration: 1 },
 								}}
+								viewport={{ once: true }}
 								className="flex items-center gap-5 p-3"
 							>
 								<img src={theme ? phone : phoneDark} alt="call" />
@@ -66,6 +69,7 @@ function Contact() {
 								y: "0",
 								transition: { delay: 1.7, duration: 1 },
 							}}
+							viewport={{ once: true }}
 							className={`flex w-fit cursor-pointer items-center gap-5 rounded-sm border ${
 								theme
 									? "bg-[#584eac38]  hover:bg-[#574eac0e]  active:bg-slate-900"
@@ -87,6 +91,7 @@ function Contact() {
 						x: "0%",
 						transition: { delay: 2, duration: 1 },
 					}}
+					viewport={{ once: true }}
 					className="ml-auto"
 				>
 					<img src={theme ? contactSvg : contactSvgLight} alt="contact" />
