@@ -6,6 +6,8 @@ import twitter from "../assets/twitter.svg";
 import linkedin from "../assets/linkedin.svg";
 import fem from "../assets/frontend.svg";
 import { ThemeContext } from "../context/ThemeContext";
+import { motion, AnimatePresence } from "framer-motion";
+import { container, item } from "../animation";
 
 function Home() {
 	const { theme } = useContext(ThemeContext);
@@ -24,64 +26,88 @@ function Home() {
 					{/* ===container=== */}
 					<div className=" max-width relative flex h-screen w-full items-center justify-center">
 						{/* ===home-img=== */}
-						<div
-							className="round-image-sm sm:round-image-md lg:round-image 
+						<AnimatePresence>
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								transition={{ duration: 3 }}
+								className="round-image-sm sm:round-image-md lg:round-image 
                             2xl:round-image2
                             shadow-purple-500
-                        "
-						>
-							<img
-								className="h-full w-full rounded-full"
-								src={me}
-								alt="Imagine"
-							/>
-						</div>
+							"
+							>
+								<img
+									className="h-full w-full rounded-full"
+									src={me}
+									alt="Imagine"
+								/>
+							</motion.div>
+						</AnimatePresence>
 						{/* ===intro=== */}
-						<div
-							className="intro gradient lg:move-down2 2xl:move-dwn3 
+						<AnimatePresence>
+							<motion.div
+								key={1}
+								initial={{ opacity: 0, y: "5%" }}
+								animate={{ opacity: 1, y: "0%" }}
+								transition={{ duration: 0.3, ease: "linear", delay: 1.5 }}
+								className="intro gradient lg:move-down2 2xl:move-dwn3 
                             p-5
                             text-white
                         "
-						>
-							<h2 className="mb-3 text-xl font-bold sm:text-2xl">HELLO,</h2>
-							<p className="text-md font-light sm:text-lg">
-								I’m Kamasah Dickson a frontend developer with a passion for
-								delivering intuitive and engaging user experiences. I bring a
-								wealth of technical knowledge, and creativity to every project.
-							</p>
-						</div>
+							>
+								<h2 className="mb-3 text-xl font-bold sm:text-2xl">HELLO,</h2>
+								<p className="text-md font-light sm:text-lg">
+									I’m Kamasah Dickson a frontend developer with a passion for
+									delivering intuitive and engaging user experiences. I bring a
+									wealth of technical knowledge, and creativity to every
+									project.
+								</p>
+							</motion.div>
+						</AnimatePresence>
 						{/* ===social-links=== */}
-						<div className="absolute bottom-0 mx-auto  flex items-end justify-center gap-5 py-5 md:right-5 md:h-full md:flex-col">
-							<img
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+						<AnimatePresence>
+							<motion.div
+								key={2}
+								variants={container}
+								initial="hidden"
+								animate="show"
+								className="absolute bottom-0 mx-auto  flex items-end justify-center gap-5 py-5 md:right-5 md:h-full md:flex-col"
+							>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={git}
-								alt="github profile"
-							/>
-							<img
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+									src={git}
+									alt="github profile"
+								/>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={twitter}
-								alt="twitter profile"
-							/>
-							<img
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+									src={twitter}
+									alt="twitter profile"
+								/>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={linkedin}
-								alt="linkedin profile"
-							/>
-							<img
-								tabIndex={0}
-								className="
+									src={linkedin}
+									alt="linkedin profile"
+								/>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="
                                 h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={fem}
-								alt="frontendMentor profile"
-							/>
-						</div>
+									src={fem}
+									alt="frontendMentor profile"
+								/>
+							</motion.div>
+						</AnimatePresence>
 					</div>
 				</div>
 			</div>
