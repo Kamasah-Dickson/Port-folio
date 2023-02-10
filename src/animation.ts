@@ -6,7 +6,7 @@ export const container = {
 		opacity: 1,
 		transition: {
 			delayChildren: 0.3,
-			staggerChildren: 0.2,
+			staggerChildren: 0.3,
 			duration: 3,
 		},
 	},
@@ -14,5 +14,5 @@ export const container = {
 
 export const item = {
 	hidden: { opacity: 0 },
-	show: { opacity: 1, transition: { duration: 0.4 } },
+	show: { opacity: 1, transition: { duration: 0.5 } },
 };
