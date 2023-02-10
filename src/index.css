@@ -1,16 +1,17 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
 	scroll-behavior: smooth;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
 	min-height: 100vh;
 	overflow-x: hidden;
+	/* transition: background 0.3s ease; */
 }
 
 @layer utilities {
@@ -122,7 +123,7 @@ body {
 		transform: rotate(-0.81deg);
 		color: transparent;
 		line-height: 1;
-		-webkit-text-stroke: 1px #3d367a6c;
+		-webkit-text-stroke: 1px #3d367a1a;
 	}
 
 	.why-hire::before {
@@ -136,12 +137,12 @@ body {
 		transform: rotate(-0.81deg);
 		color: transparent;
 		line-height: 1;
-		-webkit-text-stroke: 1px #3d367a6c;
+		-webkit-text-stroke: 1px #3d367a28;
 	}
 	.tech::before {
 		content: "MY TECH STACK";
 		position: absolute;
-		top: -0rem;
+		top: 4rem;
 		left: 1.25rem;
 		font-size: 8rem;
 		font-weight: 700;
@@ -163,6 +164,20 @@ body {
 		color: transparent;
 		line-height: 1;
 		-webkit-text-stroke: 1px #3d367a1e;
+	}
+
+	.contact::before {
+		content: "CONTACT ME";
+		position: absolute;
+		top: 1rem;
+		left: 0rem;
+		font-size: 10rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		transform: rotate(3.81deg);
+		color: transparent;
+		line-height: 1;
+		-webkit-text-stroke: 1px #3d367a18;
 	}
 
 	@media (min-width: 46.875em) {
@@ -227,5 +242,12 @@ body {
 	}
 	.my-shadow-hover {
 		box-shadow: 1rem 1rem 1rem -0.2rem rgba(0, 0, 0, 0.164);
+	}
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5625rem;
 	}
 }
