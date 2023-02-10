@@ -11,7 +11,23 @@
 body {
 	min-height: 100vh;
 	overflow-x: hidden;
-	/* transition: background 0.3s ease; */
+	transition: all background 0.3s ease;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: rgba(128, 128, 128, 0.041);
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(57, 47, 194);
+	border-radius: 20px;
+	box-shadow: 1rem 1rem 1rem 0.5rem rgb(58, 48, 150);
+	transition: 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(223, 99, 16);
+	box-shadow: 1rem 1rem 1rem 0.5rem rgba(223, 99, 16, 0.63);
 }
 
 @layer utilities {
@@ -155,7 +171,7 @@ body {
 	.project::before {
 		content: "MY PROJECTS";
 		position: absolute;
-		top: -7rem;
+		top: 0rem;
 		left: -1rem;
 		font-size: 10rem;
 		font-weight: 700;
@@ -163,7 +179,7 @@ body {
 		transform: rotate(-2.81deg);
 		color: transparent;
 		line-height: 1;
-		-webkit-text-stroke: 1px #3d367a1e;
+		-webkit-text-stroke: 1px #3d367a13;
 	}
 
 	.contact::before {
