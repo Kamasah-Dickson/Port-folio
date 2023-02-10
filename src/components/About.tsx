@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { motion } from "framer-motion";
 
 function About() {
 	const { theme } = useContext(ThemeContext);
@@ -9,7 +10,7 @@ function About() {
 			id="about"
 			className={`section-bg ${
 				!theme ? "bg-gray-100" : "bg-dark-bg"
-			} h-[500px] overflow-hidden `}
+			} h-[600px] overflow-hidden `}
 		>
 			{/* ====overlay==== */}
 			<div className="absolute right-0  top-0 -z-10 h-[100%] w-[50%] ">
@@ -17,7 +18,10 @@ function About() {
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
 			<div className="max-width h-full">
-				<div
+				<motion.div
+					initial={{ opacity: 0, y: "25%" }}
+					whileInView={{ opacity: 1, y: "0%", transition: { duration: 0.8 } }}
+					transition={{ duration: 2 }}
 					className={`relative top-36 -z-10 max-w-xl rounded-lg p-7 md:left-24 md:max-w-lg lg:left-32 ${
 						theme ? "opa-bg" : "opa-bg-2"
 					}`}
@@ -34,7 +38,7 @@ function About() {
 						level, I am here to help. Let's work together to create something
 						truly amazing."
 					</p>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
