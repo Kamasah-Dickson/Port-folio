@@ -13,7 +13,11 @@ function About() {
 			} h-[600px] overflow-hidden `}
 		>
 			{/* ====overlay==== */}
-			<div className="absolute right-0  top-0 -z-10 h-[100%] w-[50%] ">
+			<div
+				className={`absolute right-0  top-0 -z-10 h-[100%] ${
+					theme ? "w-[50%]" : "w-[100%]"
+				} sm:w-[50%] `}
+			>
 				{/* ===img=== */}
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
@@ -21,6 +25,7 @@ function About() {
 				<motion.div
 					initial={{ opacity: 0, y: "25%" }}
 					whileInView={{ opacity: 1, y: "0%", transition: { duration: 0.8 } }}
+					viewport={{ once: true }}
 					transition={{ duration: 2 }}
 					className={`relative top-36 -z-10 max-w-xl rounded-lg p-7 md:left-24 md:max-w-lg lg:left-32 ${
 						theme ? "opa-bg" : "opa-bg-2"
