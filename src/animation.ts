@@ -1,3 +1,5 @@
+import { Variants } from "framer-motion";
+
 export const container = {
 	hidden: { opacity: 0 },
 	show: {
