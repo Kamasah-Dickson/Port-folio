@@ -47,10 +47,10 @@ function Home() {
 						<AnimatePresence>
 							<motion.div
 								key={1}
-								initial={{ opacity: 0, y: "5%" }}
+								initial={{ opacity: 0, y: "10%" }}
 								animate={{ opacity: 1, y: "0%" }}
 								transition={{ duration: 0.3, ease: "linear", delay: 1.5 }}
-								className="intro gradient lg:move-down2 2xl:move-dwn3 
+								className="intro gradient lg:move-down2 2xl:move-dwn3 mb-[25px]
                             p-5
                             text-white
                         "
@@ -70,30 +70,30 @@ function Home() {
 								key={2}
 								variants={container}
 								initial="hidden"
-								animate="show"
-								className="absolute bottom-0 mx-auto  flex items-end justify-center gap-5 py-5 md:right-5 md:h-full md:flex-col"
+								whileInView="show"
+								className="absolute bottom-[10px] mx-auto  flex items-end justify-center gap-5 py-5 md:right-5 md:h-full md:flex-col"
 							>
 								<motion.img
 									variants={item}
 									tabIndex={0}
-									className="h-8 w-8 cursor-pointer transition-all
-                                hover:scale-110 active:scale-95 md:h-10 md:w-10"
+									className="mw-10 h-10
+                                cursor-pointer transition-all hover:scale-110 active:scale-95"
 									src={git}
 									alt="github profile"
 								/>
 								<motion.img
 									variants={item}
 									tabIndex={0}
-									className="h-8 w-8 cursor-pointer transition-all
-                                hover:scale-110 active:scale-95 md:h-10 md:w-10"
+									className=" h-10 w-10
+                                cursor-pointer transition-all hover:scale-110 active:scale-95"
 									src={twitter}
 									alt="twitter profile"
 								/>
 								<motion.img
 									variants={item}
 									tabIndex={0}
-									className="h-8 w-8 cursor-pointer transition-all
-                                hover:scale-110 active:scale-95 md:h-10 md:w-10"
+									className=" h-10 w-10
+                                cursor-pointer transition-all hover:scale-110 active:scale-95"
 									src={linkedin}
 									alt="linkedin profile"
 								/>
@@ -101,8 +101,8 @@ function Home() {
 									variants={item}
 									tabIndex={0}
 									className="
-                                h-8 w-8 cursor-pointer transition-all
-                                hover:scale-110 active:scale-95 md:h-10 md:w-10"
+                                h-10 w-10
+                                cursor-pointer transition-all hover:scale-110 active:scale-95"
 									src={fem}
 									alt="frontendMentor profile"
 								/>
