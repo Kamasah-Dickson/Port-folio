@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				"dark-bg": "#121129",
 				orange: "#F9850F",
+				contact: "#100F26",
 			},
 		},
 	},
