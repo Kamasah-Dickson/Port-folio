@@ -206,7 +206,7 @@ function Footer() {
 						variants={item}
 						className={`${theme ? "text-white" : "text-dark-bg"} text-center`}
 					>
-						{`&Copy ${year} All rights reserved`}
+						Copyright &copy; {year} All rights reserved
 					</motion.p>
 				</motion.div>
 			</div>
