@@ -38,12 +38,14 @@ function Footer() {
 					<motion.p variants={item} className="tex-md">
 						+2334571065
 					</motion.p>
-					<motion.p
-						variants={item}
-						className="tex-md cursor-pointer transition-colors hover:text-orange"
-					>
-						kamasahdickson19@gmail.com
-					</motion.p>
+					<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+						<motion.p
+							variants={item}
+							className="tex-md cursor-pointer transition-colors hover:text-orange"
+						>
+							kamasahdickson19@gmail.com
+						</motion.p>
+					</a>
 					<motion.div variants={item}>
 						<motion.div
 							key={8}
@@ -52,39 +54,56 @@ function Footer() {
 							whileInView="show"
 							className="flex items-end justify-center gap-5"
 						>
-							<motion.img
-								variants={item}
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+							<a
+								href="https://github.com/Kamasah-Dickson"
+								title="github profile"
+							>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={theme ? git : gitDark}
-								alt="github profile"
-							/>
-							<motion.img
-								variants={item}
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+									src={theme ? git : gitDark}
+									alt="github profile"
+								/>
+							</a>
+							<a href="https://twitter.com/Kamas_DEV" title="twitter profile">
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={theme ? twitter : twitterDark}
-								alt="twitter profile"
-							/>
-							<motion.img
-								variants={item}
-								tabIndex={0}
-								className="h-8 w-8 cursor-pointer transition-all
+									src={theme ? twitter : twitterDark}
+									alt="twitter profile"
+								/>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/kamasah-dickson-8506a6230/"
+								title="linkedin profile"
+							>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={theme ? linkedin : linkedinDark}
-								alt="linkedin profile"
-							/>
-							<motion.img
-								variants={item}
-								tabIndex={0}
-								className="
+									src={theme ? linkedin : linkedinDark}
+									alt="linkedin profile"
+								/>
+							</a>
+							<a
+								href="https://www.frontendmentor.io/profile/Kamasah-Dickson"
+								title="frontendMentor profile"
+							>
+								<motion.img
+									variants={item}
+									tabIndex={0}
+									className="
                                 h-8 w-8 cursor-pointer transition-all
                                 hover:scale-110 active:scale-95 md:h-10 md:w-10"
-								src={fem}
-								alt="frontendMentor profile"
-							/>
+									src={fem}
+									alt="frontendMentor profile"
+								/>
+							</a>
 						</motion.div>
 					</motion.div>
 				</motion.div>
@@ -187,7 +206,7 @@ function Footer() {
 						variants={item}
 						className={`${theme ? "text-white" : "text-dark-bg"} text-center`}
 					>
-						@Copy {year} All rights reserved
+						{`&Copy ${year} All rights reserved`}
 					</motion.p>
 				</motion.div>
 			</div>
