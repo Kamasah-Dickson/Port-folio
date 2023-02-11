@@ -62,26 +62,30 @@ function Contact() {
 								</div>
 							</motion.div>
 						</div>
-						<motion.div
-							initial={{ opacity: 0, y: "100%" }}
-							whileInView={{
-								opacity: 1,
-								y: "0",
-								transition: { delay: 1.7, duration: 1 },
-							}}
-							viewport={{ once: true }}
-							className={`flex w-fit cursor-pointer items-center gap-5 rounded-sm border ${
-								theme
-									? "bg-[#584eac38]  hover:bg-[#574eac0e]  active:bg-slate-900"
-									: "bg-gray-100 hover:bg-gray-300 active:bg-gray-200"
-							} p-3 shadow-sm transition-shadow `}
-						>
-							<img src={theme ? email : emailDark} alt="" />
-							<div className="flex flex-col gap-[3px]">
-								<h4 className="text-sm font-semibold">EMAIL</h4>
-								<p className="text-md font-light">kamasahdickson19@gmail.com</p>
-							</div>
-						</motion.div>
+						<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+							<motion.div
+								initial={{ opacity: 0, y: "100%" }}
+								whileInView={{
+									opacity: 1,
+									y: "0",
+									transition: { delay: 1.7, duration: 1 },
+								}}
+								viewport={{ once: true }}
+								className={`flex w-fit cursor-pointer items-center gap-5 rounded-sm border ${
+									theme
+										? "bg-[#584eac38]  hover:bg-[#574eac0e]  active:bg-slate-900"
+										: "bg-gray-100 hover:bg-gray-300 active:bg-gray-200"
+								} p-3 shadow-sm transition-shadow `}
+							>
+								<img src={theme ? email : emailDark} alt="" />
+								<div className="flex flex-col gap-[3px]">
+									<h4 className="text-sm font-semibold">EMAIL</h4>
+									<p className="text-md font-light">
+										kamasahdickson19@gmail.com
+									</p>
+								</div>
+							</motion.div>
+						</a>
 					</div>
 				</div>
 				<motion.div
