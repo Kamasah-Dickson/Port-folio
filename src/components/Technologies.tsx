@@ -135,7 +135,7 @@ function Technologies() {
 				<motion.a
 					variants={item}
 					title="framer motion"
-					href="https://www.framer.com/"
+					href="https://www.framer.com/motion/"
 					className="transition-all hover:scale-110 active:scale-95"
 				>
 					<img src={framer} alt="framer motion" />
