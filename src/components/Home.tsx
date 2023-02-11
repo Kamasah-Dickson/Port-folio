@@ -86,7 +86,7 @@ function Home() {
 										alt="github profile"
 									/>
 								</a>
-								<a href="" title="twitter profile">
+								<a href="https://twitter.com/Kamas_DEV" title="twitter profile">
 									<motion.img
 										variants={item}
 										tabIndex={0}
@@ -96,7 +96,10 @@ function Home() {
 										alt="twitter profile"
 									/>
 								</a>
-								<a href="" title="linkedin profile">
+								<a
+									href="https://www.linkedin.com/in/kamasah-dickson-8506a6230/"
+									title="linkedin profile"
+								>
 									<motion.img
 										variants={item}
 										tabIndex={0}
@@ -106,7 +109,10 @@ function Home() {
 										alt="linkedin profile"
 									/>
 								</a>
-								<a href="" title="frontendMentor profile">
+								<a
+									href="https://www.frontendmentor.io/profile/Kamasah-Dickson"
+									title="frontendMentor profile"
+								>
 									<motion.img
 										variants={item}
 										tabIndex={0}
