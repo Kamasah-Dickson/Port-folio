@@ -94,7 +94,7 @@ function Projects() {
 									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
 								} object-cover`}
 							>
-								<a href="https://github.com/Kamasah-Dickson">
+								<a href="https://github.com/Kamasah-Dickson/Apple-clone">
 									<img
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
 										src={github}
@@ -102,7 +102,7 @@ function Projects() {
 									/>
 								</a>
 
-								<a href="">
+								<a href="https://cerulean-fenglisu-2a2e33.netlify.app">
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
