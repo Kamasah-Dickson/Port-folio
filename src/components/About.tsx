@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function About() {
 	const { theme } = useContext(ThemeContext);
@@ -21,7 +22,7 @@ function About() {
 				{/* ===img=== */}
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
-			<div className="max-width h-full">
+			<div className="max-width relative h-full">
 				<motion.div
 					initial={{ opacity: 0, y: "25%" }}
 					whileInView={{ opacity: 1, y: "0%", transition: { duration: 0.8 } }}
@@ -44,6 +45,23 @@ function About() {
 						truly amazing."
 					</p>
 				</motion.div>
+
+				<Link to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+					<motion.button
+						type="button"
+						className={`absolute bottom-10 ${
+							theme ? "bg-white text-dark-bg" : "bg-dark-bg text-white"
+						} my-hover rounded-md py-3 px-6 font-medium shadow-md`}
+						initial={{ opacity: 0, y: "30%" }}
+						whileInView={{
+							opacity: 1,
+							y: "0%",
+							transition: { duration: 0.8, delay: 0.5 },
+						}}
+					>
+						Hire Me
+					</motion.button>
+				</Link>
 			</div>
 		</div>
 	);
