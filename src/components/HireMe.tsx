@@ -10,6 +10,7 @@ import PerfectDark from "../assets/perfectionist-dark.svg";
 import PerfectLight from "../assets/perfectionist.svg";
 import { container, item } from "../animation";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function HireMe() {
 	const { theme } = useContext(ThemeContext);
@@ -139,6 +140,23 @@ function HireMe() {
 					</p>
 				</motion.div>
 			</motion.div>
+			<Link to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+				<motion.button
+					type="button"
+					className={` mx-auto mt-5 flex items-center  justify-center ${
+						theme ? "bg-white text-dark-bg" : "bg-dark-bg text-white"
+					} my-hover rounded-md py-3 px-6 font-medium shadow-md`}
+					initial={{ opacity: 0, y: "30%" }}
+					whileInView={{
+						opacity: 1,
+						y: "0%",
+						transition: { duration: 0.8 },
+					}}
+					viewport={{ once: true }}
+				>
+					Hire Me
+				</motion.button>
+			</Link>
 		</div>
 	);
 }
