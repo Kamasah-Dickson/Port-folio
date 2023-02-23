@@ -7,7 +7,7 @@ import nft from "../assets/NFT.svg";
 import iphone from "../assets/Iphone.svg";
 import cinema from "../assets/cinema.svg";
 import countries from "../assets/countries.svg";
-import form from "../assets/form.svg";
+import form from "../assets/vxqbpnpbamodg5ioplbj.webp";
 import github from "../assets/github2.svg";
 import { FiExternalLink } from "react-icons/fi";
 // Import Swiper styles
@@ -224,14 +224,14 @@ function Projects() {
 									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
 								} object-cover`}
 							>
-								<a href="https://github.com/Kamasah-Dickson/Form-Login-Signup-UX">
+								<a href="https://github.com/Kamasah-Dickson/React-redesigned-enigma">
 									<img
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
 										src={github}
 										alt="github"
 									/>
 								</a>
-								<a href="https://papaya-tapioca-58b11f.netlify.app/">
+								<a href="https://capable-sable-35c3fa.netlify.app/">
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
