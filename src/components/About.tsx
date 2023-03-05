@@ -25,7 +25,7 @@ function About() {
 			<div className="max-width relative h-full">
 				<motion.div
 					initial={{ opacity: 0, y: "25%" }}
-					whileInView={{ opacity: 1, y: "0%", transition: { duration: 0.8 } }}
+					whileInView={{ opacity: 1, y: "0%", transition: { duration: 2 } }}
 					viewport={{ once: true }}
 					transition={{ duration: 2 }}
 					className={`relative top-36 -z-10 max-w-xl rounded-lg p-7 md:left-24 md:max-w-lg lg:left-32 ${
@@ -52,11 +52,11 @@ function About() {
 						className={`absolute bottom-10 ${
 							theme ? "bg-white text-dark-bg" : "bg-dark-bg text-white"
 						} my-hover rounded-md py-3 px-6 font-medium shadow-md`}
-						initial={{ opacity: 0, y: "30%" }}
+						initial={{ opacity: 0, y: "50%" }}
 						whileInView={{
 							opacity: 1,
 							y: "0%",
-							transition: { duration: 0.8, delay: 0.5 },
+							transition: { duration: 2.2, delay: 0.5 },
 						}}
 						viewport={{ once: true }}
 					>
