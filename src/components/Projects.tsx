@@ -8,6 +8,7 @@ import iphone from "../assets/Iphone.svg";
 import cinema from "../assets/cinema.svg";
 import countries from "../assets/countries.svg";
 import form from "../assets/vxqbpnpbamodg5ioplbj.webp";
+import dashboard from "../assets/Web capture_5-3-2023_02618_localhost.jpeg";
 import github from "../assets/github2.svg";
 import { FiExternalLink } from "react-icons/fi";
 // Import Swiper styles
@@ -60,7 +61,7 @@ function Projects() {
 				whileInView={{
 					opacity: 1,
 					x: "0%",
-					transition: { delay: 1.2, duration: 1 },
+					transition: { delay: 1.2, duration: 2 },
 				}}
 				viewport={{ once: true }}
 				className="max-width2 relative z-10"
@@ -85,6 +86,45 @@ function Projects() {
 					>
 						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
 							<img
+								src={dashboard}
+								alt="Admin dashboard project"
+								className="h-full w-full rounded-[50px] object-cover"
+							/>
+							<div
+								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+								} object-cover`}
+							>
+								<a
+									title="Gihub Repo"
+									href="https://github.com/Kamasah-Dickson/Admin-Dashboard"
+								>
+									<img
+										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+										src={github}
+										alt="github"
+									/>
+								</a>
+
+								<a
+									title="Open Admin Dashboard"
+									href="https://celebrated-valkyrie-8f11a1.netlify.app/"
+								>
+									<FiExternalLink
+										size={120}
+										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+									/>
+								</a>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						className={`${
+							theme ? "my-shadow" : "shadow-2xl"
+						}         w-[300px] cursor-grab rounded-[50px] `}
+					>
+						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
+							<img
 								src={iphone}
 								alt=""
 								className="h-full w-full rounded-[50px] object-cover"
@@ -94,7 +134,10 @@ function Projects() {
 									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
 								} object-cover`}
 							>
-								<a href="https://github.com/Kamasah-Dickson/Apple-clone">
+								<a
+									title="Github Repo"
+									href="https://github.com/Kamasah-Dickson/Apple-clone"
+								>
 									<img
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
 										src={github}
@@ -102,7 +145,10 @@ function Projects() {
 									/>
 								</a>
 
-								<a href="https://cerulean-fenglisu-2a2e33.netlify.app">
+								<a
+									title="Iphone 14 clone. A basic duplicate of Apple's website"
+									href="https://cerulean-fenglisu-2a2e33.netlify.app"
+								>
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
@@ -129,12 +175,16 @@ function Projects() {
 							>
 								<a href="https://github.com/Kamasah-Dickson/NFT-marketplace">
 									<img
+										title="Github Repo"
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
 										src={github}
 										alt="github"
 									/>
 								</a>
-								<a href="https://sunny-pie-8333c0.netlify.app/">
+								<a
+									title="NFT Marketplace. My ability to Unify a theme and bring ideas to live 💡. "
+									href="https://sunny-pie-8333c0.netlify.app/"
+								>
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
@@ -162,12 +212,16 @@ function Projects() {
 							>
 								<a href="https://github.com/Kamasah-Dickson/Cinema_TypeScript">
 									<img
+										title="Github Repo"
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
 										src={github}
 										alt="github"
 									/>
 								</a>
-								<a href="https://super-dasik-539156.netlify.app/">
+								<a
+									title="Cinema. Working with API's is something I love doing, explore how I work with TMDB"
+									href="https://super-dasik-539156.netlify.app/"
+								>
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
@@ -194,12 +248,16 @@ function Projects() {
 							>
 								<a href="https://github.com/Kamasah-Dickson/Rest-Country-API">
 									<img
+										title="Github Repo"
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
 										src={github}
 										alt="github"
 									/>
 								</a>
-								<a href="https://startling-crumble-ea6d3d.netlify.app/">
+								<a
+									title="Countries. A web application that provides users with information about countries around the world "
+									href="https://startling-crumble-ea6d3d.netlify.app/"
+								>
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
@@ -226,12 +284,16 @@ function Projects() {
 							>
 								<a href="https://github.com/Kamasah-Dickson/React-redesigned-enigma">
 									<img
+										title="Github Repo"
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
 										src={github}
 										alt="github"
 									/>
 								</a>
-								<a href="https://capable-sable-35c3fa.netlify.app/">
+								<a
+									title="I call this Hello React. My first React Application. Explore"
+									href="https://capable-sable-35c3fa.netlify.app/"
+								>
 									<FiExternalLink
 										size={120}
 										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
