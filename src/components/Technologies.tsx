@@ -46,7 +46,7 @@ function Technologies() {
 					viewport={{ once: true }}
 					className={`relative z-10 ${
 						!theme ? "text-dark-bg" : "text-white"
-					}  text-center  text-lg font-medium uppercase`}
+					}  px-1  text-center text-lg font-medium uppercase`}
 				>
 					TECHNOLOGIES I'VE BEEN WORKING WITH
 				</motion.h5>
