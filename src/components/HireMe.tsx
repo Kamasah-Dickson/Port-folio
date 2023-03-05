@@ -25,7 +25,7 @@ function HireMe() {
 					whileInView={{
 						opacity: 1,
 						y: "0",
-						transition: { delay: 0.5, duration: 1.2 },
+						transition: { delay: 0.5, duration: 1.8 },
 					}}
 					viewport={{ once: true }}
 					className={`relative z-10 ${
@@ -43,7 +43,7 @@ function HireMe() {
 				viewport={{ once: true }}
 				className="max-width my-grid relative z-10 h-full "
 			>
-				<motion.div variants={item} className="text-center">
+				<motion.div variants={item} className="px-2 text-center">
 					<img
 						className="m-auto"
 						src={theme ? chatDark : chatLight}
@@ -67,7 +67,7 @@ function HireMe() {
 						convey a message well among peers.
 					</p>
 				</motion.div>
-				<motion.div variants={item} className="text-center">
+				<motion.div variants={item} className="px-2 text-center">
 					<img
 						className="m-auto"
 						src={theme ? likeDark : likeLight}
@@ -91,7 +91,7 @@ function HireMe() {
 						good cooperation and remain consistent with the goal.
 					</p>
 				</motion.div>
-				<motion.div variants={item} className="text-center">
+				<motion.div variants={item} className="px-2 text-center">
 					<img
 						className="m-auto"
 						src={theme ? workDark : workLight}
@@ -115,7 +115,7 @@ function HireMe() {
 						tendency of doing something productive.
 					</p>
 				</motion.div>
-				<motion.div variants={item} className="text-center">
+				<motion.div variants={item} className="px-2 text-center">
 					<img
 						className="m-auto"
 						src={theme ? PerfectDark : PerfectLight}
@@ -150,7 +150,7 @@ function HireMe() {
 					whileInView={{
 						opacity: 1,
 						y: "0%",
-						transition: { duration: 0.8 },
+						transition: { duration: 2.1 },
 					}}
 					viewport={{ once: true }}
 				>
