@@ -7,8 +7,11 @@ import nft from "../assets/NFT.svg";
 import iphone from "../assets/Iphone.svg";
 import cinema from "../assets/cinema.svg";
 import countries from "../assets/countries.svg";
-import form from "../assets/vxqbpnpbamodg5ioplbj.webp";
-import dashboard from "../assets/Web capture_5-3-2023_02618_localhost.jpeg";
+import form from "../assets/multiForm.webp";
+import dashboard from "../assets/Admin-dashboard.jpeg";
+import ecommerce from "../assets/let's-Shop.png";
+import crypto from "../assets/cryptoExchanger.jpg";
+import podcast from "../assets/podcast.png";
 import github from "../assets/github2.svg";
 import { FiExternalLink } from "react-icons/fi";
 // Import Swiper styles
@@ -86,8 +89,8 @@ function Projects() {
 					>
 						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
 							<img
-								src={dashboard}
-								alt="Admin dashboard project"
+								src={ecommerce}
+								alt="Let's shop"
 								className="h-full w-full rounded-[50px] object-cover"
 							/>
 							<div
@@ -97,7 +100,7 @@ function Projects() {
 							>
 								<a
 									title="Gihub Repo"
-									href="https://github.com/Kamasah-Dickson/Admin-Dashboard"
+									href="https://github.com/Kamasah-Dickson/jubilant-adventure"
 								>
 									<img
 										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
@@ -107,8 +110,8 @@ function Projects() {
 								</a>
 
 								<a
-									title="Open Admin Dashboard"
-									href="https://celebrated-valkyrie-8f11a1.netlify.app/"
+									title="Let's shop ecommerce"
+									href="https://jubilant-adventure.vercel.app/"
 								>
 									<FiExternalLink
 										size={120}
@@ -118,6 +121,7 @@ function Projects() {
 							</div>
 						</div>
 					</SwiperSlide>
+
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
@@ -157,6 +161,125 @@ function Projects() {
 							</div>
 						</div>
 					</SwiperSlide>
+					<SwiperSlide
+						className={`${
+							theme ? "my-shadow" : "shadow-2xl"
+						}         w-[300px] cursor-grab rounded-[50px] `}
+					>
+						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
+							<img
+								src={podcast}
+								alt="Mypodcast"
+								className="h-full w-full rounded-[50px] object-cover"
+							/>
+							<div
+								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+								} object-cover`}
+							>
+								<a
+									title="Gihub Repo"
+									href="https://github.com/Kamasah-Dickson/podcasting-app"
+								>
+									<img
+										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+										src={github}
+										alt="github"
+									/>
+								</a>
+
+								<a
+									title="Crypto currency exchanger"
+									href="https://main--splendid-lebkuchen-683006.netlify.app/"
+								>
+									<FiExternalLink
+										size={120}
+										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+									/>
+								</a>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						className={`${
+							theme ? "my-shadow" : "shadow-2xl"
+						}         w-[300px] cursor-grab rounded-[50px] `}
+					>
+						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
+							<img
+								src={crypto}
+								alt="Admin dashboard project"
+								className="h-full w-full rounded-[50px] object-cover"
+							/>
+							<div
+								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+								} object-cover`}
+							>
+								<a
+									title="Gihub Repo"
+									href="https://github.com/Kamasah-Dickson/CryptoExchange"
+								>
+									<img
+										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+										src={github}
+										alt="github"
+									/>
+								</a>
+
+								<a
+									title="Crypto currency exchanger"
+									href="https://crypto-exchange-u7dc.vercel.app/"
+								>
+									<FiExternalLink
+										size={120}
+										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+									/>
+								</a>
+							</div>
+						</div>
+					</SwiperSlide>
+
+					<SwiperSlide
+						className={`${
+							theme ? "my-shadow" : "shadow-2xl"
+						}         w-[300px] cursor-grab rounded-[50px] `}
+					>
+						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
+							<img
+								src={dashboard}
+								alt="Admin dashboard project"
+								className="h-full w-full rounded-[50px] object-cover"
+							/>
+							<div
+								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+								} object-cover`}
+							>
+								<a
+									title="Gihub Repo"
+									href="https://github.com/Kamasah-Dickson/Admin-Dashboard"
+								>
+									<img
+										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+										src={github}
+										alt="github"
+									/>
+								</a>
+
+								<a
+									title="Open Admin Dashboard"
+									href="https://celebrated-valkyrie-8f11a1.netlify.app/"
+								>
+									<FiExternalLink
+										size={120}
+										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+									/>
+								</a>
+							</div>
+						</div>
+					</SwiperSlide>
+
 					<SwiperSlide
 						className={`${
 							theme ? "my-shadow" : "shadow-2xl"
