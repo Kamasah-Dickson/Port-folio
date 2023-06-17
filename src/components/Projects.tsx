@@ -11,6 +11,7 @@ import form from "../assets/multiForm.webp";
 import dashboard from "../assets/Admin-dashboard.jpeg";
 import ecommerce from "../assets/let's-Shop.png";
 import crypto from "../assets/cryptoExchanger.jpg";
+import chatApp from "../assets/chatApp.jpg";
 import podcast from "../assets/podcast.png";
 import github from "../assets/github2.svg";
 import { FiExternalLink } from "react-icons/fi";
@@ -152,6 +153,45 @@ function Projects() {
 								<a
 									title="Iphone 14 clone. A basic duplicate of Apple's website"
 									href="https://cerulean-fenglisu-2a2e33.netlify.app"
+								>
+									<FiExternalLink
+										size={120}
+										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+									/>
+								</a>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide
+						className={`${
+							theme ? "my-shadow" : "shadow-2xl"
+						}         w-[300px] cursor-grab rounded-[50px] `}
+					>
+						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
+							<img
+								src={chatApp}
+								alt=""
+								className="h-full w-full rounded-[50px] object-cover"
+							/>
+							<div
+								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+								} object-cover`}
+							>
+								<a
+									title="Github Repo"
+									href="https://github.com/Kamasah-Dickson/Let-s-chat"
+								>
+									<img
+										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+										src={github}
+										alt="github"
+									/>
+								</a>
+
+								<a
+									title="Let's chat a convinient way of connecting"
+									href="https://let-s-chat-gamma.vercel.app/"
 								>
 									<FiExternalLink
 										size={120}
