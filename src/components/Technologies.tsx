@@ -3,7 +3,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import react from "../assets/react.svg";
 import javaScript from "../assets/JS.svg";
 import typeScript from "../assets/Typescript.svg";
-import framer from "../assets/framer-motion-seeklogo.com.svg";
+import framer from "../assets/framerMotion.svg";
 import sass from "../assets/sass.svg";
 import redux from "../assets/REDUX.svg";
 import git from "../assets/git.svg";
@@ -11,6 +11,8 @@ import html from "../assets/html.svg";
 import css from "../assets/css.svg";
 import github from "../assets/github2.svg";
 import tailwind from "../assets/tailwind.svg";
+import nextJs from "../assets/next-js.svg";
+import firebase from "../assets/firebase.svg";
 import { motion } from "framer-motion";
 import { container, item } from "../animation";
 
@@ -18,7 +20,7 @@ function Technologies() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div
-			className="  tech relative h-full overflow-hidden pt-40 pb-40"
+			className=" tech relative h-full overflow-hidden pt-40 pb-40"
 			id="technologies"
 		>
 			<div className="overflow-hidden">
@@ -94,6 +96,14 @@ function Technologies() {
 				</motion.a>
 				<motion.a
 					variants={item}
+					title="Next js"
+					href="https://nextjs.org/"
+					className="transition-all hover:scale-110 active:scale-95"
+				>
+					<img src={nextJs} alt="Next Js" />
+				</motion.a>
+				<motion.a
+					variants={item}
 					title="Redux"
 					href="https://redux.js.org/"
 					className="transition-all hover:scale-110 active:scale-95"
@@ -115,6 +125,15 @@ function Technologies() {
 					className="transition-all hover:scale-110 active:scale-95"
 				>
 					<img src={html} alt="html" />
+				</motion.a>
+
+				<motion.a
+					title="firebase"
+					variants={item}
+					href="https://firebase.google.com/"
+					className="transition-all hover:scale-110 active:scale-95"
+				>
+					<img src={firebase} alt="firebase" />
 				</motion.a>
 				<motion.a
 					title="Css"
