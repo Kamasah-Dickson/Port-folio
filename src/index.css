@@ -236,13 +236,14 @@ body {
 	}
 	.my-grid2 {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 		align-items: flex-start;
-		gap: 1em;
+		justify-items: center;
+		gap: 1.7em;
 	}
 	.my-grid2 a,
 	.my-grid2 a img {
-		width: 100%;
+		width: 4.5rem;
 		display: block;
 		height: auto;
 	}
