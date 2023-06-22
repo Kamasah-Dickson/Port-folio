@@ -42,7 +42,7 @@ function About() {
 						partner to help bring your vision to life, or simply need a reliable
 						and skilled frontend developer to take your project to the next
 						level, I am here to help. Let's work together to create something
-						truly amazing."
+						truly amazing.
 					</p>
 				</motion.div>
 
