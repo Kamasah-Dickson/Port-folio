@@ -58,7 +58,7 @@ function Contact() {
 								<img src={theme ? phone : phoneDark} alt="call" />
 								<div className="flex flex-col gap-[3px]">
 									<h4 className="text-sm font-semibold">PHONE</h4>
-									<p className="text-md font-light">+2335945710</p>
+									<p className="text-md font-light">+233594571065</p>
 								</div>
 							</motion.div>
 						</div>
