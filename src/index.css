@@ -7,6 +7,10 @@
 	scroll-behavior: smooth;
 	font-family: "Poppins", sans-serif;
 }
+*::selection {
+	background-color: #db5508;
+	color: white;
+}
 
 body {
 	min-height: 100vh;
@@ -43,82 +47,13 @@ body {
 		background-repeat: no-repeat;
 		background-image: url(./assets/light-bg-home.svg);
 	}
-	.max-width {
-		max-width: 75rem;
-		margin-inline: auto;
-		padding-inline: 0.625rem;
-	}
-	.max-width2 {
-		max-width: 87.5rem;
-		margin-inline: auto;
-		padding-inline: 0.625rem;
-	}
-	.before {
-		position: relative;
-	}
-	.filter {
-		background-color: rgba(209, 203, 203, 0.075);
-		backdrop-filter: blur(3px);
-	}
-	.filter2 {
-		background-color: rgba(255, 255, 255, 0.432);
-		backdrop-filter: blur(3px);
-	}
-	.before::before {
-		content: "";
-		position: absolute;
-		bottom: -0.3125em;
-		left: 0;
-		width: 0;
-		height: 3px;
-		background-color: orange;
-		transition: all 0.3s ease;
-	}
-	.before:hover::before {
-		width: 80%;
-	}
-	.round-image {
-		width: 33.25rem;
-		height: 33.25rem;
-		border-radius: 100%;
-	}
-	.round-image2 {
-		width: 50.25rem;
-		height: 50.25rem;
-		border-radius: 100%;
-	}
-	.round-image-md {
-		width: 25.25rem;
-		height: 25.25rem;
-		border-radius: 100%;
-	}
 
-	.round-image-sm {
-		width: 18.25rem;
-		height: 18.25rem;
-		border-radius: 100%;
-	}
 	.gradient {
 		background: linear-gradient(
 			255.35deg,
 			rgba(20, 19, 40, 0) 9.21%,
 			rgba(20, 19, 40, 0.74) 51.7%
 		);
-	}
-
-	.intro {
-		position: absolute;
-		bottom: 4rem;
-		left: 0.625rem;
-		max-width: 25rem;
-
-		border-radius: 0.625rem;
-	}
-	.move-down {
-		bottom: 15rem;
-	}
-	.move-down2 {
-		bottom: 9rem;
 	}
 
 	.section-bg {
@@ -222,13 +157,7 @@ body {
 		background-position: center;
 		background-size: cover;
 	}
-	.opa-bg {
-		background-color: #121129e7;
-	}
-	.opa-bg-2 {
-		background-color: #ffffff15;
-		mix-blend-mode: difference;
-	}
+
 	.my-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
@@ -271,9 +200,39 @@ body {
 		transition: 0.1s ease;
 	}
 	.my-hover:hover {
-		transform: scale(1.1) !important;
+		transform: scale(1.02) !important;
+		background-color: #fa7020;
+		color: white;
+		transition: all 0.4s ease-out;
 	}
 	.my-hover:active {
-		transform: scale(0.9) !important;
+		transform: scale(1.04) !important;
+	}
+	.my-animation {
+		/* animation: changeColor 4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+		 */
+		animation: changeColor 8s cubic-bezier(0.97, -0.1, 0.21, 0.99) infinite;
+		animation-direction: alternate;
+	}
+	.my-animation2 {
+		animation: transform 0.6s cubic-bezier(0, 0, 0.22, 0.81) infinite;
+		animation-direction: alternate;
+	}
+}
+
+@keyframes changeColor {
+	from {
+		color: #fa7020;
+	}
+	to {
+		color: white;
+	}
+}
+@keyframes transform {
+	from {
+		transform: translateY(1.5px);
+	}
+	to {
+		transform: translateY(-1.5px);
 	}
 }
