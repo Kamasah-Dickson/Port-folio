@@ -25,9 +25,9 @@ function HireMe() {
 					whileInView={{
 						opacity: 1,
 						y: "0",
-						transition: { delay: 0.5, duration: 1.8 },
+						transition: { delay: 0.4, duration: 1 },
 					}}
-					viewport={{ once: true }}
+					// viewport={{ once: true }}
 					className={`relative z-10 ${
 						!theme ? "text-dark-bg" : "text-white"
 					}   text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
@@ -40,8 +40,12 @@ function HireMe() {
 				variants={container}
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: true }}
-				className="max-width my-grid relative z-10 h-full "
+				// viewport={{ once: true }}
+				className="
+				my-grid
+					relative
+					z-10
+				mx-auto h-full max-w-7xl px-3 "
 			>
 				<motion.div variants={item} className="px-2 text-center">
 					<img
@@ -64,7 +68,7 @@ function HireMe() {
 						`}
 					>
 						I have a broad understanding of verbal vocabulary. Therefore, I can
-						convey a message well among peers.
+						convey a message well very among peers.
 					</p>
 				</motion.div>
 				<motion.div variants={item} className="px-2 text-center">
@@ -87,8 +91,8 @@ function HireMe() {
 						} my-3 text-lg font-light
 						`}
 					>
-						Behind the successful projects, there’s a great team. I can build a
-						good cooperation and remain consistent with the goal.
+						Behind any successful project, there is a great team. I can be very
+						cooperative and remain consistent with goals.
 					</p>
 				</motion.div>
 				<motion.div variants={item} className="px-2 text-center">
@@ -111,8 +115,8 @@ function HireMe() {
 						} my-3 text-lg font-light
 						`}
 					>
-						I’m a kind of person who can’t stand around doing nothing. I have a
-						tendency of doing something productive.
+						I love what I do and I can't stand around doing nothing. I have a
+						tendency of being very productive.
 					</p>
 				</motion.div>
 				<motion.div variants={item} className="px-2 text-center">
@@ -140,12 +144,15 @@ function HireMe() {
 					</p>
 				</motion.div>
 			</motion.div>
-			<Link to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+			<Link
+				to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com"
+				target="_blank"
+			>
 				<motion.button
 					type="button"
 					className={` mx-auto mt-5 flex items-center  justify-center ${
 						theme ? "bg-white text-dark-bg" : "bg-dark-bg text-white"
-					} my-hover rounded-md py-3 px-6 font-medium shadow-md`}
+					} my-hover rounded-md py-2 px-5 font-medium shadow-md`}
 					initial={{ opacity: 0, y: "30%" }}
 					whileInView={{
 						opacity: 1,

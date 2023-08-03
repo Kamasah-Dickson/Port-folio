@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function About() {
@@ -22,14 +22,14 @@ function About() {
 				{/* ===img=== */}
 				<div className={`${theme ? "overlay-dark" : "overlay-light"}`}></div>
 			</div>
-			<div className="max-width relative h-full">
+			<div className="relative mx-auto h-full max-w-7xl px-3">
 				<motion.div
 					initial={{ opacity: 0, y: "25%" }}
 					whileInView={{ opacity: 1, y: "0%", transition: { duration: 2 } }}
-					viewport={{ once: true }}
+					// viewport={{ once: true }}
 					transition={{ duration: 2 }}
 					className={`relative top-36 -z-10 max-w-xl rounded-lg p-7 md:left-24 md:max-w-lg lg:left-32 ${
-						theme ? "opa-bg" : "opa-bg-2"
+						theme ? "bg-[#121129e7]" : "bg-[#ffffff15] mix-blend-difference"
 					}`}
 				>
 					<h2 className="relative z-10 mb-3 text-left text-3xl font-semibold uppercase text-white md:text-2xl lg:text-4xl ">
@@ -46,12 +46,15 @@ function About() {
 					</p>
 				</motion.div>
 
-				<Link to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+				<Link
+					to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com"
+					target="_blank"
+				>
 					<motion.button
 						type="button"
 						className={`absolute bottom-10 ${
 							theme ? "bg-white text-dark-bg" : "bg-dark-bg text-white"
-						} my-hover rounded-md py-3 px-6 font-medium shadow-md`}
+						} my-hover rounded-md py-2 px-5 font-medium shadow-md`}
 						initial={{ opacity: 0, y: "50%" }}
 						whileInView={{
 							opacity: 1,

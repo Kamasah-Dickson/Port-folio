@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import git from "../assets/github.svg";
 import gitDark from "../assets/github-dark.svg";
@@ -8,14 +8,20 @@ import linkedin from "../assets/linkedin.svg";
 import linkedinDark from "../assets/linkedin-dark.svg";
 import fem from "../assets/frontend.svg";
 import { container, item } from "../animation";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 function Footer() {
 	const year = new Date().getFullYear();
 
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div className="py-5">
-			<div className="max-width">
+			<div
+				className="
+			mx-auto
+			max-w-7xl
+			px-3
+			"
+			>
 				<motion.div
 					key={7}
 					variants={container}
@@ -38,7 +44,10 @@ function Footer() {
 					<motion.p variants={item} className="tex-md">
 						+2334571065
 					</motion.p>
-					<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+					<a
+						href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com"
+						target="_blank"
+					>
 						<motion.p
 							variants={item}
 							className="tex-md cursor-pointer transition-colors hover:text-orange"
@@ -55,6 +64,7 @@ function Footer() {
 							className="flex items-end justify-center gap-5"
 						>
 							<a
+								target="_blank"
 								href="https://github.com/Kamasah-Dickson"
 								title="github profile"
 							>
@@ -67,7 +77,11 @@ function Footer() {
 									alt="github profile"
 								/>
 							</a>
-							<a href="https://twitter.com/Kamas_DEV" title="twitter profile">
+							<a
+								href="https://twitter.com/Kamas_DEV"
+								target="_blank"
+								title="twitter profile"
+							>
 								<motion.img
 									variants={item}
 									tabIndex={0}
@@ -79,6 +93,7 @@ function Footer() {
 							</a>
 							<a
 								href="https://www.linkedin.com/in/kamasah-dickson-8506a6230/"
+								target="_blank"
 								title="linkedin profile"
 							>
 								<motion.img
@@ -92,6 +107,7 @@ function Footer() {
 							</a>
 							<a
 								href="https://www.frontendmentor.io/profile/Kamasah-Dickson"
+								target="_blank"
 								title="frontendMentor profile"
 							>
 								<motion.img
@@ -136,7 +152,7 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#home">
+								<a className=" relative text-sm font-medium" href="#home">
 									HOME
 								</a>
 							</motion.li>
@@ -146,7 +162,7 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#about">
+								<a className=" relative text-sm font-medium" href="#about">
 									ABOUT
 								</a>
 							</motion.li>
@@ -156,7 +172,7 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#hire-me">
+								<a className=" relative text-sm font-medium" href="#hire-me">
 									HIRE ME
 								</a>
 							</motion.li>
@@ -166,7 +182,10 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#technologies">
+								<a
+									className=" relative text-sm font-medium"
+									href="#technologies"
+								>
 									TECHNOLOGY
 								</a>
 							</motion.li>
@@ -176,7 +195,7 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#projects">
+								<a className=" relative text-sm font-medium" href="#projects">
 									PROJECTS
 								</a>
 							</motion.li>
@@ -186,7 +205,7 @@ function Footer() {
 									theme ? "text-white" : "text-gray-700"
 								} active:scale-x-105`}
 							>
-								<a className=" before text-sm font-medium" href="#contact">
+								<a className=" relative text-sm font-medium" href="#contact">
 									CONTACT
 								</a>
 							</motion.li>
