@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import phone from "../assets/CALL.svg";
 import email from "../assets/EMAIL.svg";
 import emailDark from "../assets/EMAIL-dark.svg";
@@ -7,15 +7,15 @@ import contactSvg from "../assets/contact.svg";
 import contactSvgLight from "../assets/contact-light-mode.svg";
 import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
+
 function Contact() {
 	const { theme } = useContext(ThemeContext);
-
 	return (
 		<div
 			id="contact"
 			className={`${theme ? "bg-contact" : "bg-white"}  mt-[50px]  py-[50px]`}
 		>
-			<div className="contact-grid max-width contact relative overflow-hidden">
+			<div className="contact-grid contact relative mx-auto max-w-7xl overflow-hidden px-3">
 				<div className={`${theme ? "text-white" : "text-dark-bg"}`}>
 					<div className="overflow-hidden pb-6">
 						<motion.h3
@@ -23,7 +23,7 @@ function Contact() {
 							whileInView={{
 								opacity: 1,
 								y: "0",
-								transition: { delay: 1, duration: 1 },
+								transition: { delay: 0.5, duration: 1.2 },
 							}}
 							viewport={{ once: true }}
 							className="mb-3 px-3 text-left text-4xl font-bold"
@@ -35,7 +35,7 @@ function Contact() {
 							whileInView={{
 								opacity: 1,
 								y: "0",
-								transition: { delay: 1.2, duration: 1 },
+								transition: { delay: 1, duration: 1.3 },
 							}}
 							viewport={{ once: true }}
 							className="text-md  max-w-md px-3  font-light"
@@ -62,7 +62,10 @@ function Contact() {
 								</div>
 							</motion.div>
 						</div>
-						<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com">
+						<a
+							href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kamasahdickson19@gmail.com"
+							target="_blank"
+						>
 							<motion.div
 								initial={{ opacity: 0, y: "100%" }}
 								whileInView={{

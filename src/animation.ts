@@ -14,7 +14,7 @@ export const container = {
 
 export const item = {
 	hidden: { opacity: 0 },
-	show: { opacity: 1, transition: { duration: 0.5 } },
+	show: { opacity: 1, transition: { duration: 1.5 } },
 };
 
 export const container2 = {
