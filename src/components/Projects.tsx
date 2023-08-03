@@ -1,18 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
-import nft from "../assets/NFT.svg";
-import iphone from "../assets/Iphone.svg";
-import cinema from "../assets/cinema.svg";
-import countries from "../assets/countries.svg";
-import form from "../assets/multiForm.webp";
-import dashboard from "../assets/Admin-dashboard.jpeg";
-import ecommerce from "../assets/let's-Shop.png";
-import crypto from "../assets/cryptoExchanger.jpg";
-import chatApp from "../assets/chatApp.jpg";
-import podcast from "../assets/podcast.png";
 import github from "../assets/github2.svg";
 import { FiExternalLink } from "react-icons/fi";
 // Import Swiper styles
@@ -21,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { motion } from "framer-motion";
+import { projectData } from "../Projects";
 function Projects() {
 	const { theme } = useContext(ThemeContext);
 	return (
@@ -83,388 +73,53 @@ function Projects() {
 					navigation
 					pagination={{ clickable: true }}
 				>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={ecommerce}
-								alt="Let's shop"
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
+					{projectData.map((project) => {
+						return (
+							<SwiperSlide
+								key={project.projectTitle}
+								className={`${
+									theme ? "my-shadow" : "shadow-2xl"
+								}         w-[300px] cursor-grab rounded-[50px] `}
 							>
-								<a
-									title="Gihub Repo"
-									href="https://github.com/Kamasah-Dickson/jubilant-adventure"
-								>
+								<div className="relative h-[450px] overflow-hidden rounded-[50px]">
 									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
+										src={project.img}
+										alt={project.imgAlt}
+										className="h-full w-full rounded-[50px] object-cover"
 									/>
-								</a>
+									<div
+										className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
+											theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
+										} object-cover`}
+									>
+										<a
+											title="Gihub Repo"
+											href={project.githubLink}
+											target="_blank"
+										>
+											<img
+												className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
+												src={github}
+												alt="github"
+											/>
+										</a>
 
-								<a
-									title="Let's shop ecommerce"
-									href="https://jubilant-adventure.vercel.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
+										<a
+											title={project.projectTitle}
+											href={project.projectLink}
+											target="_blank"
+										>
+											<FiExternalLink
+												size={120}
+												className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
+											/>
+										</a>
+									</div>
+								</div>
+							</SwiperSlide>
+						);
+					})}
 
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={iphone}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a
-									title="Github Repo"
-									href="https://github.com/Kamasah-Dickson/Apple-clone"
-								>
-									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
-									/>
-								</a>
-
-								<a
-									title="Iphone 14 clone. A basic duplicate of Apple's website"
-									href="https://cerulean-fenglisu-2a2e33.netlify.app"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={chatApp}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a
-									title="Github Repo"
-									href="https://github.com/Kamasah-Dickson/Let-s-chat"
-								>
-									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
-									/>
-								</a>
-
-								<a
-									title="Let's chat a convinient way of connecting"
-									href="https://let-s-chat-gamma.vercel.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={podcast}
-								alt="Mypodcast"
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a
-									title="Gihub Repo"
-									href="https://github.com/Kamasah-Dickson/podcasting-app"
-								>
-									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
-									/>
-								</a>
-
-								<a
-									title="Crypto currency exchanger"
-									href="https://main--splendid-lebkuchen-683006.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={crypto}
-								alt="Admin dashboard project"
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a
-									title="Gihub Repo"
-									href="https://github.com/Kamasah-Dickson/CryptoExchange"
-								>
-									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
-									/>
-								</a>
-
-								<a
-									title="Crypto currency exchanger"
-									href="https://crypto-exchange-u7dc.vercel.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={dashboard}
-								alt="Admin dashboard project"
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a
-									title="Gihub Repo"
-									href="https://github.com/Kamasah-Dickson/Admin-Dashboard"
-								>
-									<img
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2] "
-										src={github}
-										alt="github"
-									/>
-								</a>
-
-								<a
-									title="Open Admin Dashboard"
-									href="https://celebrated-valkyrie-8f11a1.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px] `}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={nft}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex h-[450px] w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a href="https://github.com/Kamasah-Dickson/NFT-marketplace">
-									<img
-										title="Github Repo"
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
-										src={github}
-										alt="github"
-									/>
-								</a>
-								<a
-									title="NFT Marketplace. My ability to Unify a theme and bring ideas to live 💡. "
-									href="https://sunny-pie-8333c0.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px]`}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={cinema}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover object-top shadow-2xl"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex h-[450px] w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a href="https://github.com/Kamasah-Dickson/Cinema_TypeScript">
-									<img
-										title="Github Repo"
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
-										src={github}
-										alt="github"
-									/>
-								</a>
-								<a
-									title="Cinema. Working with API's is something I love doing, explore how I work with TMDB"
-									href="https://super-dasik-539156.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px]`}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={countries}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover object-top shadow-2xl"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex h-[450px] w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a href="https://github.com/Kamasah-Dickson/Rest-Country-API">
-									<img
-										title="Github Repo"
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
-										src={github}
-										alt="github"
-									/>
-								</a>
-								<a
-									title="Countries. A web application that provides users with information about countries around the world "
-									href="https://startling-crumble-ea6d3d.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide
-						className={`${
-							theme ? "my-shadow" : "shadow-2xl"
-						}         w-[300px] cursor-grab rounded-[50px]`}
-					>
-						<div className="relative h-[450px] overflow-hidden rounded-[50px]">
-							<img
-								src={form}
-								alt=""
-								className="h-full w-full rounded-[50px] object-cover object-top shadow-2xl"
-							/>
-							<div
-								className={`absolute bottom-0 top-0 left-0 flex h-[450px] w-[100%] items-center justify-center gap-10 rounded-[50px] opacity-0 transition-all hover:opacity-100 ${
-									theme ? "hover:bg-[#c77d4c3f]" : "hover:bg-[#80008041]"
-								} object-cover`}
-							>
-								<a href="https://github.com/Kamasah-Dickson/React-redesigned-enigma">
-									<img
-										title="Github Repo"
-										className="h-[120] w-[120] cursor-pointer transition-all hover:scale-[1.2]"
-										src={github}
-										alt="github"
-									/>
-								</a>
-								<a
-									title="I call this Hello React. My first React Application. Explore"
-									href="https://capable-sable-35c3fa.netlify.app/"
-								>
-									<FiExternalLink
-										size={120}
-										className="transition-all hover:scale-[1.2] hover:text-white hover:drop-shadow-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</SwiperSlide>
 					<div className="mt-[50px]"></div>
 				</Swiper>
 			</motion.div>
