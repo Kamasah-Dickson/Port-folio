@@ -21,19 +21,20 @@ interface Iproject {
 
 export const projectData: Iproject[] = [
 	{
-		img: ecommerce,
-		imgAlt: `Let's shop`,
-		githubLink: "https://github.com/Kamasah-Dickson/jubilant-adventure",
-		projectTitle: `Let's shop ecommerce`,
-		projectLink: `https://jubilant-adventure.vercel.app/`,
-	},
-	{
 		img: iphone,
 		imgAlt: `Apple.com clone`,
 		githubLink: "https://github.com/Kamasah-Dickson/Apple-clone",
 		projectTitle: `Iphone 14 clone. A basic duplicate of Apple's website`,
 		projectLink: `https://cerulean-fenglisu-2a2e33.netlify.app`,
 	},
+	{
+		img: ecommerce,
+		imgAlt: `Let's shop`,
+		githubLink: "https://github.com/Kamasah-Dickson/jubilant-adventure",
+		projectTitle: `Let's shop ecommerce`,
+		projectLink: `https://jubilant-adventure.vercel.app/`,
+	},
+
 	{
 		img: rollingboard,
 		imgAlt: `Rollingboard`,
