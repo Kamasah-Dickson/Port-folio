@@ -26,12 +26,12 @@ function Projects() {
 					whileInView={{
 						opacity: 1,
 						y: "0",
-						transition: { delay: 1, duration: 1 },
+						transition: { delay: 0.4, duration: 1.2 },
 					}}
-					viewport={{ once: true }}
+					// viewport={{ once: true }}
 					className={`z-10 ${
 						!theme ? "text-dark-bg" : "text-white"
-					}  mb-3 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
+					}  mb-1 text-center text-3xl font-semibold uppercase md:text-2xl lg:text-4xl`}
 				>
 					Projects
 				</motion.h3>
@@ -40,9 +40,9 @@ function Projects() {
 					whileInView={{
 						opacity: 1,
 						y: "0",
-						transition: { delay: 1.2, duration: 1 },
+						transition: { delay: 0.6, duration: 1.1 },
 					}}
-					viewport={{ once: true }}
+					// viewport={{ once: true }}
 					className={`z-10 ${
 						!theme ? "text-gray-600" : "text-gray-300"
 					}  mb-10 text-center text-xl font-normal uppercase lg:text-2xl`}
@@ -51,17 +51,17 @@ function Projects() {
 				</motion.h4>
 			</div>
 			<motion.div
-				initial={{ opacity: 0, x: "10%" }}
+				initial={{ opacity: 0, x: "30%" }}
 				whileInView={{
-					opacity: 1,
 					x: "0%",
-					transition: { delay: 1.2, duration: 2 },
+					opacity: 1,
+					transition: { delay: 0.6, duration: 2 },
 				}}
 				viewport={{ once: true }}
-				className="max-width2 relative z-10"
+				className="relative z-10 mx-auto max-w-7xl px-[0.625rem]"
 			>
 				<Swiper
-					className="mt-6 "
+					className="mt-6 select-none "
 					// install Swiper modules
 					modules={[Navigation, Pagination, A11y]}
 					spaceBetween={40}
