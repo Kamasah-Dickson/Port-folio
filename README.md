@@ -3,8 +3,5 @@
 
 
 ## Mobile darkmode
-![kamasah-dickson netlify app_(iPhone 12 Pro)](https://github.com/Kamasah-Dickson/Port-folio/assets/86136379/6dae5454-7a6d-4131-9539-ec4f723f9814)
-
-
-## Mobile lightmode
-![kamasah-dickson netlify app_(iPhone 12 Pro) (1)](https://github.com/Kamasah-Dickson/Port-folio/assets/86136379/f73fe01e-deac-4fb1-af53-029d14b81e76)
+![kamasah-dickson netlify app_(iPhone 12 Pro) (2)](https://github.com/Kamasah-Dickson/Port-folio/assets/86136379/7ea01c3a-55ac-47c4-9f7f-e2943c41e01d)
+![kamasah-dickson netlify app_(iPhone 12 Pro) (3)](https://github.com/Kamasah-Dickson/Port-folio/assets/86136379/c3b64f4c-b041-418e-8630-94ac33b8acec)
