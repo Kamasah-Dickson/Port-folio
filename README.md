@@ -1,7 +1,5 @@
 # Portfolio
 
-=======
-
 ## Live site: https://kamasah-dickson.netlify.app/
 
 ## Mobile darkmode
