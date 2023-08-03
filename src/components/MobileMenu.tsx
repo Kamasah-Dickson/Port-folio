@@ -18,7 +18,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 		<div
 			className={` ${
 				show ? "translate-x-0 " : "translate-x-full"
-			} my-trans fixed top-0 right-0 z-50 min-h-screen w-4/5 text-white md:hidden`}
+			} my-trans fixed top-0 right-0 z-50 min-h-screen w-full select-none text-white md:hidden`}
 		>
 			<nav
 				className={`${theme ? "bg-dark-bg" : "bg-gray-900"} bg-opacity-[0.97]`}
@@ -43,7 +43,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="list-none text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-lg font-medium"
+									className=" relative text-lg font-medium"
 									href="#home"
 									onClick={() => setShow(false)}
 								>
@@ -55,7 +55,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-lg font-medium"
+									className=" relative text-lg font-medium"
 									href="#about"
 									onClick={() => setShow(false)}
 								>
@@ -67,7 +67,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-lg font-medium"
+									className=" relative text-lg font-medium"
 									href="#hire-me"
 									onClick={() => setShow(false)}
 								>
@@ -79,7 +79,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-lg font-medium"
+									className=" relative text-lg font-medium"
 									href="#technologies"
 									onClick={() => setShow(false)}
 								>
@@ -91,7 +91,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-lg font-medium"
+									className=" relative text-lg font-medium"
 									href="#projects"
 									onClick={() => setShow(false)}
 								>
@@ -103,7 +103,7 @@ function MobileMenu({ show, setShow }: showInterface) {
 								className="text-white active:scale-x-105"
 							>
 								<a
-									className=" before text-sm font-medium"
+									className=" relative text-sm font-medium"
 									href="#contact"
 									onClick={() => setShow(false)}
 								>
