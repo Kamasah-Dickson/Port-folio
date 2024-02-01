@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Header from "./Header";
 import me from "../assets/EgLF6Jmi_4x.jpg";
 import git from "../assets/github.svg";
@@ -39,9 +39,9 @@ function Home() {
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ duration: 3 }}
-								className="h-[18.25rem] w-[18.25rem] rounded-full shadow-purple-500 sm:h-[25.25rem] sm:w-[25.25rem] lg:h-[33.25rem] lg:w-[33.25rem]
-                            2xl:h-[50.25rem]
-                            2xl:w-[50.25rem]
+								className="sm:h-[25.25rem] sm:w-[25.25rem] lg:h-[33.25rem] lg:w-[33.25rem] 2xl:h-[50.25rem] 2xl:w-[50.25rem] h-[18.25rem] w-[18.25rem]
+                            rounded-full
+                            shadow-purple-500
 							"
 							>
 								<img
@@ -58,9 +58,9 @@ function Home() {
 								initial={{ opacity: 0, translateY: 15 }}
 								animate={{ opacity: 1, translateY: 0 }}
 								transition={{ duration: 0.8, ease: "easeIn", delay: 1.5 }}
-								className="gradient absolute bottom-16 left-[0.625rem] mb-[50px] max-w-md rounded-[0.625rem] p-5 text-white
-								sm:mb-0
-								md:mb-[25px] lg:bottom-36
+								className="gradient md:mb-[25px] absolute bottom-16 left-[0.625rem] mb-[50px] max-w-md rounded-[0.625rem] p-5
+								text-white
+								sm:mb-0 lg:bottom-36
 								"
 							>
 								<h2 className="mb-3 text-xl font-bold sm:text-2xl">HELLO,</h2>
@@ -85,7 +85,7 @@ function Home() {
 										my-animation2 
 										"
 									/>
-									<p className=" my-animation font-bold active:scale-[1.03] ">
+									<p className=" my-animation active:scale-[1.03] font-bold ">
 										Download CV
 									</p>
 								</motion.a>
