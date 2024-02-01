@@ -18,10 +18,10 @@ function Header() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			className={`fixed top-0 left-0 z-50 w-full shadow-md ${
+			className={`fixed left-0 top-0 z-50 w-full shadow-md ${
 				theme
-					? "bg-[#d1cbcb13] filter backdrop-saturate-150"
-					: " bg-[#ffffff6e] backdrop-saturate-[3]"
+					? "bg-[#d1cbcb38] filter backdrop-saturate-150"
+					: " bg-[#1311266e]"
 			}`}
 		>
 			<div
@@ -32,9 +32,7 @@ function Header() {
 			h-[75px] max-w-7xl items-center justify-between px-3"
 			>
 				<h1
-					className={`cursor-pointer text-[20px] font-bold ${
-						theme ? "text-white" : "text-gray-700"
-					} md:text-xl lg:text-2xl`}
+					className={`cursor-pointer text-[20px] font-bold text-white md:text-xl lg:text-2xl`}
 				>
 					<a href="/">
 						KAMAS<span className="text-orange active:scale-105">.DEV</span>
@@ -47,16 +45,14 @@ function Header() {
 							variants={container}
 							initial="hidden"
 							animate="show"
-							className="hidden items-center gap-5  md:flex"
+							className="hidden items-center gap-5 text-white  md:flex"
 						>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#home"
 								>
 									HOME
@@ -64,12 +60,10 @@ function Header() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#about"
 								>
 									ABOUT
@@ -77,12 +71,10 @@ function Header() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#hire-me"
 								>
 									HIRE ME
@@ -90,12 +82,10 @@ function Header() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#technologies"
 								>
 									TECHNOLOGY
@@ -103,12 +93,10 @@ function Header() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#projects"
 								>
 									PROJECTS
@@ -116,12 +104,10 @@ function Header() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className={`list-none ${
-									theme ? "text-white" : "text-gray-700"
-								} active:scale-x-105`}
+								className={`list-none active:scale-x-105`}
 							>
 								<a
-									className=" relative text-sm font-medium before:absolute before:left-0 before:bottom-[-0.3125em] before:h-1 before:w-0 before:bg-[orange] before:transition-all hover:before:w-4/5"
+									className=" before:bottom-[-0.3125em] before:bg-[orange] hover:before:w-4/5 relative text-sm font-medium before:absolute before:left-0 before:h-1 before:w-0 before:transition-all"
 									href="#contact"
 								>
 									CONTACT
@@ -134,11 +120,7 @@ function Header() {
 								tabIndex={0}
 								onClick={() => setTheme((prev) => !prev)}
 							>
-								{theme ? (
-									<MdLightMode color="white" size={20} />
-								) : (
-									<MdDarkMode size={20} className="text-gray-700" />
-								)}
+								<MdLightMode color="white" size={20} />
 							</motion.li>
 						</motion.ul>
 					</AnimatePresence>
