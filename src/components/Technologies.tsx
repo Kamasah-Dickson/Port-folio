@@ -9,7 +9,7 @@ function Technologies() {
 	const { theme } = useContext(ThemeContext);
 	return (
 		<div
-			className=" tech relative h-full overflow-hidden pt-40 pb-40"
+			className=" tech relative h-full overflow-hidden pb-40 pt-40"
 			id="technologies"
 		>
 			<div className="overflow-hidden">
@@ -62,7 +62,7 @@ function Technologies() {
 							href={tech.link}
 							target="_blank"
 							title={tech.title}
-							className="transition-all hover:scale-[1.04] active:scale-95"
+							className="hover:scale-[1.04] transition-all active:scale-95"
 							key={tech.link}
 						>
 							<img src={tech.img} alt={tech.title} />
